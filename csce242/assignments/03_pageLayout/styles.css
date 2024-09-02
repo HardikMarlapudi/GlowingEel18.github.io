@@ -1,0 +1,185 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: lightskyblue;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ececc0;
+    color: white;
+}
+
+.layout{
+    display: inline-flex;
+}
+
+.layout2{
+    display: inline-block;
+    margin: center;
+}
+
+.idea-content{
+    display: inline-block;
+
+}
+
+/* Header */
+header {
+    background-color: #e4eaa9;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Navigation */
+nav {
+    background-color: #c0392b;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Main content area */
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #99a3c3;
+}
+
+/* Content area within main */
+.content {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+    color: white;
+    box-shadow: #c0392b;
+}
+
+/* Sidebar (aside) */
+aside {
+    flex: 1;
+    background-color: #c0392b;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    border: 2px solid #ddd;
+}
+
+aside h2, aside ul {
+    margin-bottom: 10px;
+}
+
+aside ul li {
+    margin: 5px 0;
+}
+
+aside ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Ideas section */
+.ideas {
+    display: flex;
+    background-color: #d9dbbb;
+    margin-bottom: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.idea {
+    padding: 20px;
+    margin: 10px;
+    text-align: justify;
+    color: lightskyblue;
+}
+
+.idea2 {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.items {
+    color: white;
+}
+
+.links {
+    color: white;
+}
+
+.title{
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Footer */
+footer {
+    color: lightskyblue;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .ideas {
+        flex-direction: column;
+    }
+}
