@@ -219,39 +219,3 @@ h2 {
     text-align: center;
     display: block;
 }
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.assignment {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.assignment h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-.assignment img {
-    width: 100%;
-    height: auto;
-}
-
-.assignment p {
-    font-size: 1em;
-    line-height: 1.6;
-}
