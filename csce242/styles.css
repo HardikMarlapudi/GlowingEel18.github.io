@@ -111,6 +111,7 @@ body {
 
 .container {
     width: 80%;
+    height: 500px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 20px;
@@ -148,54 +149,109 @@ h2 {
 }
 
 .assignment h3 {
-    font-size: 16px;
     margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #4CAF50;
 }
 
 .assignment p {
     font-size: 14px;
     color: #555555;
     line-height: 1.5;
+    
 }
 
 .container {
     display: grid;
     place-items: center;
-    height: 230vh;
+    height: 500vh;
     gap: 20px;
 }
 
 .assignment-box1 {
-    width: 300px;
-    margin: 10px;
+    background-color: white;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    box-sizing: border-box;
     text-align: center;
-    display: center;
-    justify-content: space-between;
+    display: inline-block;
 }
 
 .assignment-box2 {
-    width: 300px;
-    margin: 10px;
+    background-color: white;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
 }
 
 .assignment-box3 {
-    width: 300px;
-    margin: 10px;
+    background-color: white;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
 }
 
 .assignment-box4 {
-    width: 300px;
-    margin: 10px;
+    background-color: white;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.assignment {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.assignment h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.assignment img {
+    width: 100%;
+    height: auto;
+}
+
+.assignment p {
+    font-size: 1em;
+    line-height: 1.6;
 }
