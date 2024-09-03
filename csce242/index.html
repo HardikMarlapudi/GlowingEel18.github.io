@@ -55,10 +55,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <header>
         <h1>CSCE 242: Client-Server Computing</h1>
         <h2>Assignments</h2>
         <h3>Hardik Marlapudi</h3>
+    </header>
         <div class="assignments">
             <div class="assignment-box1">
                 <h3><a href="assignments/01_basicHTML/index.html">Assignment 1 - Basic HTML</a></h3>
@@ -114,7 +115,7 @@ header h1 {
 }
 
 header h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 main {
@@ -129,11 +130,12 @@ main {
     padding: 20px;
     margin: 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 30%;
     box-sizing: border-box;
     text-align: center;
+
 }
 
 .assignment img {
@@ -160,7 +162,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -170,17 +172,18 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     main {
+        padding: 20px;
         flex-direction: column;
         align-items: center;
     }
 
     .assignment {
-        width: 90%;
-        margin: 10px 0;
+        width: 80%;
+        margin: 20px 0;
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     header h2 {
@@ -198,15 +201,18 @@ body {
 .container {
     width: 80%;
     height: 500px;
-    margin: 0 auto;
-    background-color: #ffffff;
+    margin: 20px auto;
+    background-color: #fff;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     font-size: 24px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -217,20 +223,25 @@ h2 {
 
 .assignments {
     display: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .assignment {
     display: center;
+    justify-content: center;
     width: 30%;
     background-color: #f9f9f9;
     padding: 15px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .assignment img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
     margin-bottom: 15px;
 }
 
@@ -241,10 +252,10 @@ h2 {
 }
 
 .assignment p {
+    margin-bottom: 20px;
     font-size: 14px;
     color: #555555;
     line-height: 1.5;
-    
 }
 
 .container {
@@ -259,9 +270,9 @@ h2 {
     padding: 20px;
     margin: 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 40%;
     box-sizing: border-box;
     text-align: center;
     display: inline-block;
@@ -272,9 +283,9 @@ h2 {
     padding: 20px;
     margin: 0 auto;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 40%;
     box-sizing: border-box;
     text-align: center;
     display: block;
@@ -287,7 +298,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 40%;
     box-sizing: border-box;
     text-align: center;
     display: block;
@@ -300,7 +311,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 40%;
     box-sizing: border-box;
     text-align: center;
     display: block;

@@ -31,7 +31,11 @@ body {
 
 .idea-content{
     display: inline-block;
-
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
 }
 
 /* Header */
@@ -54,6 +58,8 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -87,6 +93,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 20px;
 }
 
 .box {
@@ -127,6 +134,7 @@ aside ul li a {
     background-color: #d9dbbb;
     margin-bottom: 20px;
     border-top: 2px solid #ddd;
+    padding: 20px;
 }
 
 .idea {
@@ -134,21 +142,25 @@ aside ul li a {
     margin: 10px;
     text-align: justify;
     color: lightskyblue;
+    flex: 1 1 200px;
 }
 
 .idea2 {
     padding: 20px;
     margin: 10px;
     text-align: center;
+    color: lightskyblue;
 }
 
 .items {
     color: white;
+    background-color: #c0392b;
 }
 
 .links {
     color: white;
     text-align: center;
+    background-color: #c0392b;
 }
 
 .title{
