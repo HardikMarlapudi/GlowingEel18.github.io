@@ -1,252 +1,128 @@
 /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
-}
-
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    padding-bottom: 50px;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
-}
-
-header h2 {
-    font-size: 1.5em;
-}
-
-main {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    margin: 0;
     padding: 20px;
-}
+    box-sizing: border-box;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #00b300;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
 
-.assignment img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 150px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
+  .assignment-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    transition: box-shadow 0.3s ease;
+  }
 
-.assignment h3 {
-    margin-bottom: 10px;
+  .assignment-cad:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .assignment-card h3 {
     font-size: 1.5em;
-    color: #4CAF50;
-}
+    color: #333;
+    margin-top: 0;
+  }
 
-.assignment p {
+  .assignment-card p {
     font-size: 1em;
-    line-height: 1.5;
-}
+    color: #666;
+    line-height: 1.5em;
+  }
 
+  @media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .assignment-card {
+        margin: 10px;
+        padding: 15px;
+    }
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Assignments Container */
+  .assignments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* Assignment Card */
+  .assignment {
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    width: 90%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .assignment img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Hover Effect */
+  .assignment:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Layout */
+  @media screen and (max-width: 768px) {
+    .assignments {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Accessibility Enhancements */
+  .assignment:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 4px;
+  }
+  
+  /* Additional Media Queries */
+  @media screen and (max-width: 480px) {
+    .assignment {
+      padding: 10px;
+      margin: 5px;
+    }
+  }
+  
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 0.9em;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    main {
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .assignment {
-        width: 80%;
-        margin: 20px 0;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    header h2 {
-        font-size: 1.5em;
-    }
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
-.container {
-    width: 80%;
-    height: 500px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.assignments {
-    display: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.assignment {
-    display: center;
-    justify-content: center;
-    width: 30%;
-    background-color: #f9f9f9;
-    padding: 15px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.assignment img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.assignment h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    color: #4CAF50;
-}
-
-.assignment p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #555555;
-    line-height: 1.5;
-}
-
-.container {
-    display: grid;
-    place-items: center;
-    height: 500vh;
-    gap: 20px;
-}
-
-.assignment-box1 img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 150px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-.assignment-box1 {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    box-sizing: border-box;
-    text-align: center;
-    display: inline-block;
-}
-
-.assignment-box2 img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 150px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-.assignment-box2 {
-    background-color: white;
-    padding: 20px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    box-sizing: border-box;
-    text-align: center;
-    display: block;
-}
-
-.assignment-box3 img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 150px;
-    margin-bottom: 10px;
-}
-
-.assignment-box3 {
-    background-color: white;
-    padding: 20px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    box-sizing: border-box;
-    text-align: center;
-    display: block;
-}
-
-.assignment-box4 img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 150px;
-    margin-bottom: 10px;
-}
-
-.assignment-box4 {
-    background-color: white;
-    padding: 20px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    box-sizing: border-box;
-    text-align: center;
-    display: block;
 }

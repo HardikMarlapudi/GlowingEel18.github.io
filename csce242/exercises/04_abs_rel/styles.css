@@ -1,4 +1,8 @@
 /* Structure */
+:root {
+    --main-background-color: skyblue;
+}
+
 body {
     background-color: skyblue;
     font-family: Arial, Helevetia, sans-serif;
