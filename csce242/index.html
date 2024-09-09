@@ -7,41 +7,64 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>CSCE 242: Client-Server Computing</h1>
-        <h2>Assignments</h2>
+        <h2>Assignments and Projects</h2>
         <p>Hardik Marlapudi</p>
     </header>
-    <main>
-        <section class="assignments">
-        <div class="assignment">
-            <h3><a href="assignments/01_basicHTML/index.html">Assignment 1 - Basic HTML</a></h3>
-            <img src="Assignment 1 - Basic HTML.png" alt="Screenshot of Assignment 1" width="250px" height="300px">
-            <p>This assignment covers the basics of HTML, focusing on the foundational elements that make up a webpage. It includes an in-depth exploration of the structure of a webpage, the appropriate use of semantic elements to enhance accessibility and SEO, and the process of linking external stylesheets and images to create a visually cohesive and well-organized website. By completing this assignment, students will gain a solid understanding of how to build and structure web pages effectively, setting the stage for more advanced topics in web development.</p>
-        </div>
 
-        <div class="assignment">
-            <h3><a href="assignments/02_basicCSS/index.html">Assignment 2 - Basic CSS</a></h3>
-            <img src="Assignment 2 - Basic CSS.png" alt="Screenshot of Assignment 2" width="250px" height="300px">
-            <p>This assignment, introduces CSS as a powerful tool for styling HTML documents, enabling the transformation of plain web pages into visually appealing and user-friendly interfaces. Topics covered include the use of CSS selectors to target specific HTML elements, the application of various CSS properties to control layout, typography, and color schemes, and the implementation of responsive design techniques using media queries. These skills are essential for creating web pages that adapt seamlessly to different screen sizes and devices, ensuring a consistent and optimal user experience across all platforms. By mastering these concepts, students will be equipped to enhance the aesthetics and functionality of their web projects.</p>
-        </div>
-
-        <div class="assignment">
-            <h3><a href="assignments/03_pageLayout/index.html">Assignment 3 - Page Layout</a></h3>
-            <img src="Page Layout.png" alt="Screenshot of Assignment 3" width="250px" height="300px">
-            <p>This assignment, allows students to build Flexboxes and Grid layout systems, two powerful CSS techniques that are essential for building responsive and well-structured web page layouts. Flexbox provides a flexible way to align and distribute space among items within a container, making it ideal for creating dynamic and adaptive designs. Grid, on the other hand, allows for the creation of complex, grid-based layouts that can be precisely controlled and easily adjusted for different screen sizes. By exploring these layout systems, students will learn how to design web pages that not only look great but also maintain their structure and usability across various devices and screen resolutions. This assignment will equip students with the skills necessary to build modern, responsive web designs that are both functional and visually appealing.</p>
-        </div>
-
-        <div class="assignment">
-            <h3><a href="https://github.com/GlowingEel18/MyWebsiteProject/blob/main/Project%20Part%201_%20Topic%20Selection%20-%20Hardik%20Marlapudi%20(1).pdf/index.html">Assignment 4 - Project Part 1: Topic Selection</a></h3>
-            <img src="Project Part 1_Topic Selection.jpg" alt="Screenshot of Assignment 4" width="250px" height="300px">
-            <p>This assignment, allows students to embark on the exciting challenge of building a fully functional website based on a topic of your choice. This project allows you to showcase the skills and techniques you have learned throughout the course, while also giving you the freedom to express your creativity and personal style. Whether you choose to create a website for yourself, a personal project, or for a client, this assignment offers the opportunity to apply your knowledge in a practical, real-world context. You'll be able to demonstrate your proficiency in web design, development, and user experience, crafting a site that not only meets your goals but also reflects your unique vision and ingenuity. This is your chance to build something meaningful, engaging, and professional—an impressive addition to your portfolio that highlights your capabilities as a web developer.</p>
-        </div>
+    <!-- Main Container for Assignments and Projects -->
+    <div id="main-container">
         
+        <!-- Assignments Section -->
+        <div id="assignment-item">
+            <h2>Assignments</h2>
+            <ul>
+                <li>
+                    <a href="assignments/01_basicHTML/index.html">Assignment 1 - Basic HTML</a>
+                    <div class="image-container">
+                    <img src="Assignment 1 - Basic HTML.png" alt="Screenshot of Assignment 1" width="250px" height="300px">
+                    <p>This assignment covers the basics of HTML, focusing on the foundational elements that make up a webpage. It includes an in-depth exploration of the structure of a webpage, the appropriate use of semantic elements to enhance accessibility and SEO, and the process of linking external stylesheets and images to create a visually cohesive and well-organized website. By completing this assignment, students will gain a solid understanding of how to build and structure web pages effectively, setting the stage for more advanced topics in web development.</p>
+                </li>
+
+                <li>
+                    <a href="assignments/02_basicCSS/index.html">Assignment 2 - Basic CSS</a>
+                    <img src="Assignment 2 - Basic CSS.png" alt="Screenshot of Assignment 2" width="250px" height="300px">
+                    <p>This assignment, introduces CSS as a powerful tool for styling HTML documents, enabling the transformation of plain web pages into visually appealing and user-friendly interfaces. Topics covered include the use of CSS selectors to target specific HTML elements, the application of various CSS properties to control layout, typography, and color schemes, and the implementation of responsive design techniques using media queries. These skills are essential for creating web pages that adapt seamlessly to different screen sizes and devices, ensuring a consistent and optimal user experience across all platforms. By mastering these concepts, students will be equipped to enhance the aesthetics and functionality of their web projects.</p>
+                </li>
+
+                <li>
+                    <a href="assignments/03_pageLayout/index.html">Assignment 3 - Page Layout</a>
+                    <img src="Page Layout.png" alt="Screenshot of Assignment 3" width="250px" height="300px">
+                    <p>This assignment, allows students to build Flexboxes and Grid layout systems, two powerful CSS techniques that are essential for building responsive and well-structured web page layouts. Flexbox provides a flexible way to align and distribute space among items within a container, making it ideal for creating dynamic and adaptive designs. Grid, on the other hand, allows for the creation of complex, grid-based layouts that can be precisely controlled and easily adjusted for different screen sizes. By exploring these layout systems, students will learn how to design web pages that not only look great but also maintain their structure and usability across various devices and screen resolutions. This assignment will equip students with the skills necessary to build modern, responsive web designs that are both functional and visually appealing.</p>
+                </li>
+            </ul>
         </section>
-    </main>
+    </div>
+        <!-- Projects Section -->
+        <div id="projects-item">
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/GlowingEel18/GlowingEel18.github.io/blob/main/csce242/Project%20Part%201_Topic%20Selection.jpg">
+                        Project Part 1: Topic Selection
+                    </a>
+                    <img src="Project Part 1_Topic Selection.jpg" alt="Screenshot of Assignment 4" width="250px" height="300px">
+                    <p>This assignment, allows students to embark on the exciting challenge of building a fully functional website based on a topic of your choice. This project allows you to showcase the skills and techniques you have learned throughout the course, while also giving you the freedom to express your creativity and personal style. Whether you choose to create a website for yourself, a personal project, or for a client, this assignment offers the opportunity to apply your knowledge in a practical, real-world context. You'll be able to demonstrate your proficiency in web design, development, and user experience, crafting a site that not only meets your goals but also reflects your unique vision and ingenuity. This is your chance to build something meaningful, engaging, and professional—an impressive addition to your portfolio that highlights your capabilities as a web developer.</p>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
     <footer>
-        <center><p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p></center>
+        <center>
+            <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
+        </center>
     </footer>
 </body>
 </html>
