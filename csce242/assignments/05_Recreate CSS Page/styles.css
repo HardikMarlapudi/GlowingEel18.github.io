@@ -26,24 +26,46 @@ a {
     color: white;
 }
 
-.top-bar {
+.top-nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    text-align: right;
-    background-color: #000000;
-    padding: 10px;
 }
 
-.gateways {
+.gateways ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+}
+
+.gateways ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.gateways ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.gateways ul li a:hover {
+    text-decoration: underline;
 }
 
 .gateways li a {
     color: white;
     font-weight: bold;
-    text-align: right;
 }
 
 .gateways li a:hover {
