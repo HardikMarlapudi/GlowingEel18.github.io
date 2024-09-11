@@ -9,6 +9,8 @@ document.getElementById('countColumn').addEventListener('click', function() {
 const randomImage = document.getElementById('random-image');
 randomImage.addEventListener('click', function() {
     randomImage.src = "https://picsum.photos/200?random=" + Math.floor(Math.random() * 100);
+
+    
 });
 
 // 3. Slider functionality to move the box
