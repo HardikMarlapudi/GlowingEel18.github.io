@@ -8,10 +8,8 @@ document.getElementById('countColumn').addEventListener('click', function() {
 // 2. Random Image refresh functionality
 const randomImage = document.getElementById('random-image');
 randomImage.addEventListener('click', function() {
-    randomImage.src = "https://picsum.photos/200?random=" + Math.floor(Math.random() * 100);
-
-    
-});
+        location.reload();
+    });
 
 // 3. Slider functionality to move the box
 document.getElementById('slider').addEventListener('input', function() {
