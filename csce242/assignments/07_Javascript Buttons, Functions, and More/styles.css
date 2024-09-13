@@ -49,6 +49,7 @@ header {
     position: relative;
     margin: 20px auto;
     border: 1px solid #ddd;
+    font-display: center;
 }
 
 input[type="range"] {
