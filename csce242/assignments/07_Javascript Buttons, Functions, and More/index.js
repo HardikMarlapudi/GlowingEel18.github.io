@@ -8,15 +8,45 @@ document.getElementById('countColumn').addEventListener('click', function() {
 // 2. Random Image refresh functionality
 const randomImage = document.getElementById('random-image');
 randomImage.addEventListener('click', function() {
-        location.reload();
-    });
+    location.reload();
+});
 
-// 3. Slider functionality to move the box
-document.getElementById('slider').addEventListener('input', function() {
+// 3. Slider functionality to move the box left and right equally within the orange border
+document.getElementById('slider').addEventListener('range', function() {
     let sliderValue = this.value;
     let box = document.getElementById('movableBox');
-    // Calculate new position
-    let newPosition = (sliderValue / 100) * 300;
-    // Move the box to the left or right based on slider value
-    box.style.transform = `translateX(${newPosition - 92}px)`; // Moves left and right
+    let container = document.getElementById('column'); // The container with the orange border
+
+    // Calculate the width of the container and box
+    let containerWidth = container.offsetWidth;
+    let boxWidth = box.offsetWidth;
+
+    // Calculate the range the box can move (container width - box width)
+    let maxMove = containerWidth - boxWidth;
+
+    // Calculate new position, where 50% slider value centers the box
+    let newPosition = (sliderValue / 100) * maxMove - (maxMove / 2);
+
+    // Move the box within the container
+    box.style.transform = `translateX(${newPosition}px)`;
+});
+
+// 3. Slider functionality to move the box left and right within the container
+document.getElementById('slider').addEventListener('input', function () {
+    let sliderValue = this.value;
+    let box = document.getElementById('movableBox');
+    let container = box.parentElement; // Get the parent container of the box
+
+    // Calculate the width of the container and box
+    let containerWidth = container.offsetWidth;
+    let boxWidth = box.offsetWidth;
+
+    // Calculate the range the box can move (container width - box width)
+    let maxMove = containerWidth - boxWidth;
+
+    // Calculate new position, where 0% slider value positions the box on the left, and 100% on the right
+    let newPosition = (sliderValue / 100) * maxMove;
+
+    // Move the box within the container
+    box.style.transform = `translateX(${newPosition - 90}px)`;
 });
