@@ -4,6 +4,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 header {
@@ -15,11 +19,30 @@ header {
     margin-bottom: 20px;
 }
 
-.container {
+.slider-container {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
+}
+
+#slider {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+}
+
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: #d9534f;
+    margin: 20px auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 10px;
 }
 
 .column {
