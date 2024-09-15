@@ -28,7 +28,7 @@ document.getElementById('slider').addEventListener('range', function() {
     let newPosition = (sliderValue / 100) * maxMove - (maxMove / 2);
 
     // Move the box within the container
-    box.style.transform = `translateX(${newPosition + 90}px)`;
+    box.style.transform = `translateX(${newPosition + 125}px)`;
 });
 
 // 3. Slider functionality to move the box left and right within the container
@@ -48,5 +48,5 @@ document.getElementById('slider').addEventListener('input', function () {
     let newPosition = (sliderValue / 100) * maxMove;
 
     // Move the box within the container
-    box.style.transform = `translateX(${newPosition - 90}px)`;
+    box.style.transform = `translateX(${newPosition - 120}px)`;
 });
