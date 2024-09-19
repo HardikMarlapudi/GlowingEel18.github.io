@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - If Statements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Assignment 8</h1>
+        <h2>If Statements</h2>
+        <nav class="menu">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="menuItems">
+                <li onclick="showExercise(1)">Exercise 1</li> |
+                <li onclick="showExercise(2)">Exercise 2</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Exercise 1: Color Slider -->
+        <section id="colorSlider" class="exercise">
+            <h3>Color Slider</h3>
+            <input type="range" id="red" min="0" max="255" value="0" oninput="updateColor()">
+            <p id="colorMessage">Slide to adjust the red value</p>
+        </section>
+
+        <!-- Exercise 2: Picture Chooser -->
+        <section id="pictureChooser" class="exercise hidden">
+            <h3>Picture Chooser</h3>
+            <button onclick="showPicture('small')">Small</button>
+            <button onclick="showPicture('medium')">Medium</button>
+            <button onclick="showPicture('large')">Large</button>
+            <img id="picture" src="" class="hidden">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hardik Marlapudi | All Rights Reserved</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
