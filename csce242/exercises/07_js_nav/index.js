@@ -23,3 +23,44 @@ document.getElementById("move-down").onclick = () => {
     pos ++;
     document.getElementById("ball").style.setProperty("top", pos, + "px");
 }
+
+document.getElementById("btn-show-color").onclick = () => {
+    const color = document.getElementById("txt-enter-color").value.toLowerCase().trim();
+    const messageP = document.getElementById("color-message");
+    let mood = "";
+
+    if(color == "red") {
+        mood = "angry";
+    }
+    else if(color == "blue"){
+        mood = "moody";
+    }
+    else {
+        mood = "undefined";
+    }
+
+    messageP.innerHTML = `You chose ${color} so you are ${mood}`;
+}
+
+/* Donations */
+/* Get the number 
+- If it is not a number or it is negitive, show an error in the error
+Otherwise First show the percent out of 10000 towards goal
+Next step a visual representation with a box and a gradient */
+let donation = 0;
+document.getElementById("btn-donate").onclick = () => {
+    const goal = 10000;
+    const donation = document.getElementById("txt-donations").value;
+    const error = document.getElementById("error-donations");
+    error.innerHTML = "";  //clear previous error
+
+    //if we got an invalid donation -> not a number or less than 0
+    if(isNaN(donation) || donation < 0){
+        error.innerHTML = "* Invalid";
+        return;
+    }
+
+    const percentGoal = donation / goal * 100;
+    console.log(percentGoal + "%");
+    document.querySelector(":root").style.setProperty("--funds", percentGoal);
+}

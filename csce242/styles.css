@@ -1,0 +1,205 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  .assignments {
+    display: flex;
+    align-items: column;
+    margin-bottom: 20px;
+  }
+  
+  .assignment-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .assignment-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assignment-box h3 {
+    color: #4CAF50;
+  }
+  
+  .assignment-box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .assignment-box p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .assignment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .assignment img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .assignment-details {
+    max-width: 600px;
+  }
+  
+  .assignment-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .projects-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  header h2 {
+    margin: 10px 0;
+    font-size: 28px;
+    color: #ffdd57;
+  }
+  
+  header p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  /* Main Container */
+  #main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Assignments and Projects Sections */
+  section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #006400;
+  }
+  
+  /* Styling the list of assignments and projects */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 40px;
+  }
+  
+  ul li img {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  ul li p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff4500;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #main-container {
+        padding: 10px;
+    }
+  
+    ul li img {
+        width: 100%;
+        height: auto;
+    }
+  
+    header h1 {
+        font-size: 28px;
+    }
+  
+    header h2 {
+        font-size: 22px;
+    }
+  
+    header p {
+        font-size: 16px;
+    }
+  
+    h2 {
+        font-size: 22px;
+    }
+  
+    ul li p {
+        font-size: 14px;
+    }
+  }
+  
