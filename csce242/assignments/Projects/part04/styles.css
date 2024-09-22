@@ -729,7 +729,9 @@ body {
   /* Main Content Styling */
   .main-content {
     padding: 40px;
-    text-align: center;
+    display: block;
+    justify-content: block;
+    align-items: block;
   }
   
   h2 {
@@ -971,17 +973,34 @@ header p {
   padding: 20px;
 }
 
-.book-grid {
+.book-catalog {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 }
 
 .book-item {
-  flex-basis: 200px;
-  background-color: #f9f9f9;
-  padding: 10px
+  text-align: center;
+  margin: 10px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.book-item img {
+  width: 200px;
+  height: 200px;
+}
+
+.book-item.hidden {
+  display: none;
+}
+
+.popular-books {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Footer */

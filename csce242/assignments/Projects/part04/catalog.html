@@ -22,42 +22,45 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <h2>Book Catalog</h2>
+    <div class="filter">
         <label for="genre">Filter by Genre:</label>
-        <select id="genre">
+        <select id="genre" onchange="filterBooks()">
             <option value="all">All</option>
             <option value="fiction">Fiction</option>
-            <option value="non-fiction">Non-Fiction</option>
+            <option value="nonfiction">NonFiction</option>
         </select>
-
-        <div class="book-section">
-            <div class="book" data-genre="fiction">
-
-                <img src="TheAwakening.jpg" alt="The Awakening">
-                <a href="https://www.goodreads.com/book/show/58345.The_Awakening"><h3>The Awakening</h3>
-
-                <img src="ToKillaMockingBird.jpg" alt="To Kill a MockingBird">
-                <a href="https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird"><h3>To Kill a Mockingbird</h3>
-
-                <img src="Fahrenheit.jpg" alt="Fahrenheit">
-                <a href="https://www.goodreads.com/book/show/13079982-fahrenheit-451"><h3>Fahrenheit</h3></a>
-            </div>
-            <div class="book" data-genre="non-fiction">
-
-                      <img src="StrangeChemistry.jpg" alt="The Awakening" class="book-image">
-                      <a href="https://www.goodreads.com/book/show/32337991-strange-chemistry"><h3>Strange Chemistry</h3></a>
-              
-                      <img src="Gory Details.jpg" alt="To Kill a Mockingbird" class="book-image">
-                      <a href="https://www.goodreads.com/book/show/50188782-gory-details"><h3>Gory Details: Adventures from the Dark Side of Science</h3></a>
-              
-                      <img src="Periodic Tables.jpg" alt="Fahrenheit 451" class="book-image">
-                      <a href="https://www.goodreads.com/book/show/10294187-periodic-tales"><h3>Periodic Tables</h3></a>
-                
-            </div>
-            <!-- Add more books as needed -->
+    </div>
+    
+    <div class="book-catalog">
+        <!-- Fiction Books -->
+        <div class="book-item fiction">
+            <img src="TheAwakening.jpg" alt="The Awakening">
+            <a href="https://www.goodreads.com/book/show/58345.The_Awakening"><h3>The Awakening</h3>
         </div>
+        <div class="book-item fiction">
+            <img src="ToKillaMockingBird.jpg" alt="To Kill a Mockingbird">
+            <a href="https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird"><h3>To Kill a Mockingbird</h3>
+        </div>
+        <div class="book-item fiction">
+            <img src="Fahrenheit.jpg" alt="Fahrenheit 451">
+            <a href="https://www.goodreads.com/book/show/13079982-fahrenheit-451"><h3>Fahrenheit 451</h3></a>
+        </div>
+    
+        <!-- NonFiction Books -->
+        <div class="book-item nonfiction">
+            <img src="StrangeChemistry.jpg" alt="Strange Chemistry">
+            <a href="https://www.goodreads.com/book/show/32337991-strange-chemistry"><h3>Strange Chemistry</h3></a>
+        </div>
+        <div class="book-item nonfiction">
+            <img src="Gory Details.jpg" alt="Gory Details">
+            <a href="https://www.goodreads.com/book/show/50188782-gory-details"><h3>Gory Details: Adventures from the Dark Side of Science</h3></a>
+        </div>
+        <div class="book-item nonfiction">
+            <img src="Periodic Tables.jpg" alt="Periodic Tables">
+            <a href="https://www.goodreads.com/book/show/10294187-periodic-tales"><h3>Periodic Tables</h3></a>
+        </div>
+    </div>
+    
     </main>
 
     <footer>
@@ -65,19 +68,21 @@
     </footer>
 
     <script>
-        const genreSelect = document.getElementById('genre');
-        const books = document.querySelectorAll('.book');
-
-        genreSelect.addEventListener('change', function () {
-            const selectedGenre = this.value;
-            books.forEach(book => {
-                if (selectedGenre === 'all' || book.getAttribute('data-genre') === selectedGenre) {
-                    book.style.display = 'block';
+        function filterBooks() {
+            var genre = document.getElementById('genre').value;
+            var books = document.getElementsByClassName('book-item');
+        
+            for (var i = 0; i < books.length; i++) {
+                if (genre === 'all') {
+                    books[i].classList.remove('hidden');
+                } else if (books[i].classList.contains(genre)) {
+                    books[i].classList.remove('hidden');
                 } else {
-                    book.style.display = 'none';
+                    books[i].classList.add('hidden');
                 }
-            });
-        });
-    </script>
+            }
+        }
+        </script>
+
 </body>
 </html>
