@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Arrays Assignment</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 10 - Arrays</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Assignment 10: Arrays</h1>
-        
-        <div id="image-grid">
-            <!-- Images will be dynamically added here by JavaScript -->
-        </div>
-        
-        <div id="description">
-            <h2 id="image-title"></h2>
-            <p id="image-desc"></p>
-        </div>
+  <div class="container">
+    <h1>Assignment 10 : Arrays</h1>
+
+    <!-- Display title and description -->
+    <div class="image-info">
+      <h3 id="image-title">Gardening</h3>
+      <p id="image-description">Time to dig the garden!</p>
+    </div>
+
+    <!-- Gallery of images -->
+    <div class="gallery">
+      <div class="image-item" onclick="showInfo('Party', 'Party time with a cute hat!')">
+        <img src="images/birthday.jpg" alt="Party Image">
+      </div>
+
+      <div class="image-item" onclick="showInfo('Clown', 'Look at that adorable clown!')">
+        <img src="images/clown.jpg" alt="Clown Image">
+      </div>
+
+      <div class="image-item" onclick="showInfo('Rain', 'I think it\'s time to bring your umbrella.')">
+        <img src="images/rain.jpg" alt="Rain Image">
+      </div>
+
+      <div class="image-item" onclick="showInfo('Paper', 'Ready to write something new.')">
+        <img src="images/read.jpg" alt="Paper Image">
+      </div>
+
+      <div class="image-item" onclick="showInfo('Gardening', 'Time to dig the garden!')">
+        <img src="images/shovel.jpg" alt="Gardening Image">
+      </div>
+
+      <div class="image-item" onclick="showInfo('Working', 'Ready to Work!')">
+        <img src="images/work.jpg" alt="Working Image">
+      </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2024 Hardik Marlapudi. All Rights Reserved.</p>
-    </footer>
-    
-    <script src="index.js"></script>
+        <p class="footer-left">Image by <a href="https://www.freepik.com" target="_blank">Freepik</a></p>
+        <p class="footer-center">&copy; 2024 Hardik Marlapudi. All Rights Reserved.</p>
+      </footer>         
+
+  <script src="index.js"></script>
 </body>
 </html>
