@@ -1,29 +1,37 @@
 function drawStars() {
-    const numStars = document.getElementById('stars').value;
-    const canvas = document.getElementById('canvas');
-    const error = document.getElementById('error');
-
-    canvas.innerHTML = '';
-    error.innerHTML = '';
-
-    if(numStars <= 0){
-        error.textContent = 'Invalid Input';
+    const starCount = document.getElementById('starCount').value;
+    const starCanvas = document.getElementById('starCanvas');
+    const errorElement = document.getElementById('error');
+    
+    // Clear canvas and error message
+    starCanvas.innerHTML = '';
+    errorElement.textContent = '';
+  
+    // Validate input
+    if (starCount <= 0 || isNaN(starCount)) {
+      errorElement.textContent = '* Invalid Input';
+      return;
     }
-
-    for(let i = 0; i < numStars; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-
-        const x = Math.random() * (canvas.clientWidth - 5);
-        const y = Math.random() * (canvas.clientHeight - 5);
-
-        star.style.left = `${x}px`;
-        star.style.top = `${y}px`;
-
-        star.addEventListener('click', () => {
-            alert(`You clicked on star #${i + 1}`);
-        });
-
-        canvas.appendChild(star);
+  
+    // Draw stars
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.textContent = '★';
+  
+      // Random position
+      const xPos = Math.floor(Math.random() * (starCanvas.offsetWidth - 20));
+      const yPos = Math.floor(Math.random() * (starCanvas.offsetHeight - 20));
+  
+      star.style.left = `${xPos}px`;
+      star.style.top = `${yPos}px`;
+  
+      // Add click event to show star number
+      star.addEventListener('click', () => {
+        alert(`Star ${i + 1}`);
+      });
+  
+      starCanvas.appendChild(star);
     }
-}
+  }
+  
