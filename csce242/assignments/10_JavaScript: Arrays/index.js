@@ -12,7 +12,7 @@ const imagesArray = [
     },
     {
         title: "Rain",
-        description: "Rain can be relaxing",
+        description: "I think it's time to bring your umbrella",
         src: "images/rain.jpg"
     },
     {
