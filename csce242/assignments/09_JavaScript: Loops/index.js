@@ -35,3 +35,12 @@ function drawStars() {
     }
   }
   
+  function draw() {
+    const stars = document.getElementById('stars').value;
+    if (!isNaN(stars) && stars > 0) {
+        drawStars(stars);
+        document.getElementById('feedback').textContent = `${stars} stars drawn!`;
+    } else {
+        document.getElementById('feedback').textContent = 'Please enter a valid number.';
+    }
+}

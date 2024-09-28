@@ -5,9 +5,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f0f8ff; /* Light pastel background */
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -17,8 +16,9 @@ body {
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px #e0e0e0;
 }
 
 .input-section {
@@ -37,11 +37,28 @@ input {
 }
 
 button {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: green;
+    background-color: #28a745; /* current green */
+    border: none;
     color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
 }
 
 .error {
@@ -63,6 +80,16 @@ button {
     position: absolute;
     color: yellow;
     font-size: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    canvas {
+        width: 100%;
+        height: auto;
+    }
 }
 
 footer {
