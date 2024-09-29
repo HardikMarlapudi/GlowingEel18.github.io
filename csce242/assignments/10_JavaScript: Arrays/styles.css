@@ -7,14 +7,15 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  height: 100vh; /* Full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh; /* Safe height for all devices */
 }
 
 .container {
   width: 80%;
+  max-width: 1200px; /* Ensure container doesn't stretch too much on large screens */
   padding: 20px;
   background-color: #f5f5dc; /* Light yellowish background */
   border-radius: 8px;
@@ -34,9 +35,20 @@ h1, h2 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
   gap: 20px; /* Increased gap between the images */
-  justify-content: center; /* Center the grid horizontally */
+}
+
+/* Mobile version: single-column layout */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .image-item {
+    width: 100%; /* Let items fill the full width */
+    height: auto; /* Adjust height accordingly */
+  }
 }
 
 .image-item {
@@ -45,7 +57,7 @@ h1, h2 {
   border: 2px solid #ddd;
   border-radius: 5px;
   text-align: center;
-  width: 150px; /* Fixed width */
+  width: 150px; /* Fixed width for larger screens */
   height: 200px; /* Fixed height */
   display: flex;
   justify-content: center;
@@ -59,13 +71,16 @@ h1, h2 {
   object-fit: contain; /* Ensures images scale and stay within the square */
 }
 
+
+
 footer {
   width: 100%;
-  position: relative; /* Set relative positioning for absolute positioning of the link */
+  position: relative;
   text-align: center;
   margin-top: 20px;
   font-size: 0.9em;
   color: #555;
+  padding-bottom: 30px; /* Ensures enough space for the absolute positioned text */
 }
 
 footer p {
