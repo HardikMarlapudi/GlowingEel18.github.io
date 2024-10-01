@@ -8,9 +8,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Safe height for all devices */
+  min-height: 100vh; /* Ensure the body takes the full height of the viewport */
 }
 
 .container {
@@ -22,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content horizontally */
+  flex-grow: 1; /* Makes the container take up all available space */
 }
 
 h1, h2 {
@@ -36,13 +38,16 @@ h1, h2 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
-  gap: 20px; /* Increased gap between the images */
+  gap: 40px; /* Increased gap between the images */
+  justify-items: center; /* Centers the image items within each grid cell */
+  margin-bottom: 20px; /* Add some space between the gallery and the footer */
 }
 
 /* Mobile version: single-column layout */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 30px; /* Adjust the gap for smaller screens */
   }
 
   .image-item {
@@ -71,16 +76,14 @@ h1, h2 {
   object-fit: contain; /* Ensures images scale and stay within the square */
 }
 
-
-
+/* Footer fixes */
 footer {
   width: 100%;
-  position: relative;
   text-align: center;
-  margin-top: 20px;
+  margin-top: auto; /* Pushes the footer to the bottom */
   font-size: 0.9em;
   color: #555;
-  padding-bottom: 30px; /* Ensures enough space for the absolute positioned text */
+  padding: 10px 0;
 }
 
 footer p {
@@ -96,14 +99,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Position the "Image by Freepik" link in the bottom left corner */
 .footer-left {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-left: 10px; /* Add some margin for better spacing */
+  float: left;
+  margin-left: 10px;
 }
 
 .footer-center {
-  margin-top: 10px;
+  text-align: center;
+  clear: both;
+}
+
+.footer {
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  font-family: 'Arial', sans-serif;  /* Clean, professional font */
 }
