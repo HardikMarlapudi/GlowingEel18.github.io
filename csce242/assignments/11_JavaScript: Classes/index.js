@@ -49,7 +49,7 @@ class Bird {
 
 // Array of bird objects
 const birds = [
-    new Bird("Hummingbird", "2.5 inches", "3-5 years", "Nectar (Sugar water)", "Trees", "Nicknamed 'Hummers' Tiny little colorful birds, that bring joy to everyone :)", "images/hummingbird.jpg"),
+    new Bird("Hummingbird", "2.5 inches", "3-5 years", "Nectar", "Trees", "Nicknamed 'Hummers'", "images/hummingbird.jpg"),
     new Bird("Blue Jay", "9-12 inches", "7 years", "Seeds, Nuts", "Forests", "Can mimic hawks", "images/bluejay.jpg"),
     new Bird("Cardinal", "8-9 inches", "3 years", "Seeds", "Woodlands", "Known for bright red color", "images/cardinal.jpg"),
     new Bird("Robin", "10 inches", "2 years", "Insects, Worms", "Gardens", "Famous for early morning songs", "images/robin.jpg")
