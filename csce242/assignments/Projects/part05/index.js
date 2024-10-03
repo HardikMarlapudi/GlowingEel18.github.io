@@ -30,6 +30,50 @@ function changeBook(bookIndex) {
     bookItem.querySelector('p').textContent = bookData.description;
 }
 
+// Create the filter div
+const filterDiv = document.createElement('div');
+filterDiv.className = 'filter';
+
+// Create the label for the select dropdown
+const label = document.createElement('label');
+label.setAttribute('for', 'genre');
+label.innerText = 'Filter by Genre:';
+filterDiv.appendChild(label);
+
+// Create the select dropdown
+const select = document.createElement('select');
+select.id = 'genre';
+select.setAttribute('onchange', 'filterBooks()');
+
+// Create the option elements for the select dropdown
+const optionAll = document.createElement('option');
+optionAll.value = 'all';
+optionAll.innerText = 'All';
+select.appendChild(optionAll);
+
+const optionFiction = document.createElement('option');
+optionFiction.value = 'fiction';
+optionFiction.innerText = 'Fiction';
+select.appendChild(optionFiction);
+
+const optionNonFiction = document.createElement('option');
+optionNonFiction.value = 'nonfiction';
+optionNonFiction.innerText = 'NonFiction';
+select.appendChild(optionNonFiction);
+
+// Append the select dropdown to the filter div
+filterDiv.appendChild(select);
+
+// Append the filter div to the specific container
+document.getElementById('filter-container').appendChild(filterDiv);
+
+// Placeholder function for 'filterBooks' which would be defined separately
+function filterBooks() {
+    // Logic for filtering books by genre
+    console.log('Filtering books...');
+}
+
+
 function filterBooks() {
     var genre = document.getElementById('genre').value;
     var books = document.getElementsByClassName('book-item');
