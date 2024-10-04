@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: red;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navbar Styles */
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+
+.navbar {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 15px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar li a:hover {
+    background-color: #777;
+}
+
+.categories {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Popular Books Section */
+.popular-books {
+    padding: 10px;
+    text-align: center;
+}
+
+.popular-books h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Book Grid */
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Book Items */
+.book-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-basis: calc(33.33% - 20px); /* 3 items per row on desktop */
+}
+
+.book-item:hover {
+    transform: scale(1.05);
+}
+
+.book-item img {
+    max-width: 45%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.book-item h3 {
+    font-size: 1.5rem;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* Book grid stacks into one column */
+    .book-grid {
+        flex-direction: column;
+    }
+
+    .book-item {
+        flex-basis: 100%; /* Full width for each item */
+        margin-bottom: 20px;
+    }
+
+    .navbar li {
+        display: block; /* Stack navigation links vertically */
+        margin-bottom: 10px;
+    }
+
+    .navbar li:last-child {
+        margin-bottom: 0;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .book-item img {
+        width: 45%; /* Smaller image size for mobile */
+    }
+}

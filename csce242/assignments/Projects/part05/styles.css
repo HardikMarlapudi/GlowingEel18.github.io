@@ -33,22 +33,6 @@ header h1 {
     font-size: 2.5rem;
 }
 
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav input[type="text"] {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-}
 
 /* Hero Section Styles */
 .hero {
@@ -125,7 +109,7 @@ nav input[type="text"] {
 }
 
 .category h3 {
-    font-size: 1.5rem;
+    font-size: 0.5rem;
     margin-bottom: 15px;
 }
 
@@ -163,26 +147,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul li a.active {
-    text-decoration: underline;
   }
   
   .user-info {
@@ -305,24 +269,7 @@ p{
     border-radius: 10px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    background-color: #222;
-    padding: 15px;
-}
 
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover{
-    color: #f39c12;
-}
 
 .about-section {
     padding: 20px;
@@ -402,12 +349,7 @@ nav ul {
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
-    font-weight: bold;
     padding: 10px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -577,31 +519,14 @@ body {
     background-color: #f9f9f9;
   }
   
-  .header {
+  header p{
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
   }
   
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
   
-  nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul li a.active {
-    text-decoration: underline;
-  }
   
   h2 {
     font-size: 32px;
@@ -671,28 +596,7 @@ body {
     font-size: 24px;
   }
   
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav ul li a:hover,
-  nav ul li a.active {
-    text-decoration: underline;
-  }
-  
+
   .user-info {
     font-size: 16px;
     color: white;
@@ -791,21 +695,7 @@ header {
   padding: 15px 0;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
 
 .username {
   position: absolute;
@@ -828,28 +718,6 @@ header h1 {
 
 header p {
   text-align: center;
-}
-
-/* Navigation bar styling */
-.navbar {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  background-color: #333;
-}
-
-.navbar li {
-  margin: 0 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-}
-
-.navbar a:hover {
-  background-color: #555;
 }
 
 /* Popular Book Section */
@@ -1057,30 +925,6 @@ header p {
   font-size: 1.2em;
 }
 
-.navbar {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  text-align: center;
-}
-
-.navbar li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.navbar li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  background-color: #444;
-  border-radius: 5px;
-}
-
-.navbar li a:hover {
-  background-color: #555;
-}
-
 /* Main Content Styles */
 .main-content {
   text-align: center;
@@ -1139,6 +983,250 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+/* CSS Variables for Colors */
+:root {
+  --main-bg-color: #f0f0f0;
+  --header-bg-color: #000;
+  --text-color: #fff;
+  --accent-color: #333;
+  --button-color: #444;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f7f7f7, #ffffff);
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #666;
+}
+
+
+/* Hero Section Styles */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: url('library.jpg') no-repeat center center/cover;
+  color: white;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero .button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero .button:hover {
+  background-color: #c0392b;
+}
+
+/* About Section Styles */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ecf0f1;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #555;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Categories Section */
+.categories {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.category {
+  display: inline-block;
+  width: 45%;
+  margin: 20px 2.5%;
+  padding: 20px;
+  background-color: #f1c40f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.category p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Footer Styles */
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 10px 0;
+position: relative;
+width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Align navigation in one column */
+  nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav a {
+      margin: 10px 0; /* Add margin between links */
+      font-size: 1rem; /* Make text larger for mobile */
+  }
+
+  .hero h2, .hero p, .about h2, .about p, .categories h2, .category h3, .category p {
+      text-align: center;
+  }
+
+  /* Hero Section becomes a column */
+  .hero {
+      padding: 20px 10px;
+  }
+
+  /* Categories Section becomes a column */
+  .category {
+      width: 100%; /* Full width for mobile */
+      margin-bottom: 20px;
+  }
+
+  /* Book Section becomes a column */
+  .book-section {
+      flex-direction: column;
+  }
+
+  .book {
+      width: 100%;
+      max-width: 90%;
+      margin-bottom: 20px;
+  }
+
+  /* Search Bar full width on mobile */
+  .search-bar {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .search-bar input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .search-bar button {
+      width: 100%;
+  }
+
+  /* Popular Books Section full width */
+  .book-catalog {
+      flex-direction: column;
+  }
+
+  .book-item {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+/* Default Desktop Layout (above 768px) */
+@media (min-width: 768px) {
+  .categories {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .category {
+      width: 30%;
+  }
+
+  .book-section {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .book-item {
+      width: 30%;
+  }
 }
 
 /* Media Queries for Mobile View */
