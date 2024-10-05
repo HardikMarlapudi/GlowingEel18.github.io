@@ -37,4 +37,4 @@ function displayRandomBook() {
 }
 
 // Call the function when the page loads
-window.onload = displayRandomBook;
+window.onload = () => displayRandomBook();

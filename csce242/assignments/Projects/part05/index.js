@@ -15,8 +15,8 @@ const popularBooks = [
 // Keep track of the current index for each book
 let currentBookIndexes = Array(popularBooks.length).fill(0);
 
-// Function to change the content of a book when clicked
-function changeBook(bookIndex) {
+// Function to change the content of a book when clicked using arrow function
+const changeBook = bookIndex => {
     // Increment the current index of the clicked book, wrapping back to the start if necessary
     currentBookIndexes[bookIndex] = (currentBookIndexes[bookIndex] + 1) % popularBooks.length;
 
@@ -67,18 +67,12 @@ filterDiv.appendChild(select);
 // Append the filter div to the specific container
 document.getElementById('filter-container').appendChild(filterDiv);
 
-// Placeholder function for 'filterBooks' which would be defined separately
-function filterBooks() {
-    // Logic for filtering books by genre
-    console.log('Filtering books...');
-}
+// Arrow function for 'filterBooks' functionality
+const filterBooks = () => {
+    const genre = document.getElementById('genre').value;
+    const books = document.getElementsByClassName('book-item');
 
-
-function filterBooks() {
-    var genre = document.getElementById('genre').value;
-    var books = document.getElementsByClassName('book-item');
-
-    for (var i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
         if (genre === 'all') {
             books[i].classList.remove('hidden');
         } else if (books[i].classList.contains(genre)) {

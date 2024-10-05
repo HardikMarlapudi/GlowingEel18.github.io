@@ -26,15 +26,15 @@ const books = [
     }
 ];
 
-// Function to display a random book
-function displayRandomBook() {
+// Function to display a random book using arrow function
+const displayRandomBook = () => {
     const randomIndex = Math.floor(Math.random() * books.length);
     const selectedBook = books[randomIndex];
 
     document.getElementById('book-title').textContent = selectedBook.title;
     document.getElementById('book-description').textContent = selectedBook.description;
     document.getElementById('book-cover').src = selectedBook.cover;
-}
+};
 
-// Call the function when the page loads
-window.onload = displayRandomBook;
+// Call the function when the page loads using arrow function
+window.onload = () => displayRandomBook();

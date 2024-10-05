@@ -1,84 +1,154 @@
-* {
+/* Global styles and fonts */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Georgia', serif;
-    background-color: #f0f0f0;
     color: #333;
-    line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
+/* Remove margin between header and navbar */
+.welcome-section {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 40px;
+    background-color: #333;
+    color: red;
+    font-family: 'Arial', serif;
+    margin-bottom: 0; /* Ensure no margin below the header */
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #2c3e50;
+.welcome-section p {
+    color: white;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Ensure no margin at the top or bottom */
+    border-top: none; /* Optional: Remove border if added */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Ensure no extra space */
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Responsive Navbar - Mobile View */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Main Content Styles */
+.container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h2 {
-    font-size: 1.5em;
-    color: #7f8c8d;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.book-cover {
-    text-align: center;
-    margin-bottom: 20px;
+header h3 {
+    font-size: 1.8rem;
+    color: #666;
 }
 
-.cover {
-    width: 300px;
+.book-cover img {
+    max-width: 45%;
     height: auto;
     border-radius: 10px;
-}
-
-.book-info, .stories, .fun-fact {
     margin-bottom: 20px;
 }
 
-h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #34495e;
+.book-info h3, .key-concepts h3, .fun-fact h3 {
+    font-size: 1.8rem;
+    color: #333;
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.book-info p, .key-concepts ul, .fun-fact p {
+    font-size: 1.1rem;
+    line-height: 1.6em;
 }
 
+/* Fun Fact Button */
 button {
-    background-color: #34495e;
+    padding: 12px 18px;
+    background-color: #333;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #2c3e50;
+    background-color: #777;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Arial', serif;
+}
+
+/* Hidden Fact */
 .hidden {
     display: none;
-}
-
-p {
-    margin-top: 10px;
-    font-size: 1.2em;
 }

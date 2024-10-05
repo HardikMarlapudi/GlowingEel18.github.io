@@ -32,14 +32,14 @@ const books = [
     }
 ];
 
-// Function to shuffle and select random books to display
-function getRandomBooks() {
+// Function to shuffle and select random books to display using arrow function
+const getRandomBooks = () => {
     const shuffledBooks = books.sort(() => 0.5 - Math.random());
     return shuffledBooks.slice(0, 3); // Select the first 3 books
 }
 
-// Function to display the selected books on the page
-function displayBooks() {
+// Function to display the selected books on the page using arrow function
+const displayBooks = () => {
     const bookListContainer = document.getElementById('novel-list');
     const randomBooks = getRandomBooks();
 
@@ -60,5 +60,5 @@ function displayBooks() {
     });
 }
 
-// Run the function to display books when the page loads
-window.onload = displayBooks;
+// Run the function to display books when the page loads using arrow function
+window.onload = () => displayBooks();

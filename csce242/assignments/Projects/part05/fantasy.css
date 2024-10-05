@@ -70,7 +70,7 @@ nav ul li a:hover {
 }
 
 .featured-book img {
-    width: 100%;
+    width: 45%;
     height: auto;
     border-radius: 10px;
 }
@@ -107,7 +107,7 @@ footer {
     }
 
     .featured-book {
-        max-width: 100%; /* Makes the book section take full width on smaller screens */
+        max-width: 45%; /* Makes the book section take full width on smaller screens */
         padding: 15px;    /* Adjusts padding for better spacing on small screens */
     }
 

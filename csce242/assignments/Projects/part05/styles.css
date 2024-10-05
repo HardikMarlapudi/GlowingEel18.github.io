@@ -408,14 +408,6 @@ button:hover {
     color: var(--accent-color);
 }
 
-/* Footer Styles */
-footer {
-    background-color: var(--header-bg-color);
-    text-align: center;
-    color: white;
-    padding: 10px 0;
-}
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     nav ul {
@@ -526,8 +518,6 @@ body {
     text-align: center;
   }
   
-  
-  
   h2 {
     font-size: 32px;
     color: #333;
@@ -541,7 +531,7 @@ body {
   }
   
   .book {
-    width: 200px;
+    width: 45%;
     text-align: center;
   }
   

@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.querySelector('button[type="submit"]');
     const searchInput = document.getElementById('search-input');
 
-    searchButton.addEventListener('click', function(e) {
+    searchButton.addEventListener('click', (e) => {
         const searchText = searchInput.value.trim();
 
         if (searchText === "") {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // JavaScript to handle the search functionality
 
-function searchBook() {
+const searchBook = () => {
     // Get the search input
     const searchInput = document.getElementById('search-input').value.toLowerCase();
 
@@ -53,4 +53,4 @@ function searchBook() {
         // Show an alert or error message if the book is not found
         alert("Sorry, the book you're looking for is not available.");
     }
-}
+};

@@ -26,8 +26,8 @@ const books = [
     }
 ];
 
-// Function to display a random book
-function displayRandomBook() {
+// Function to display a random book using arrow function
+const displayRandomBook = () => {
     const randomIndex = Math.floor(Math.random() * books.length);
     const selectedBook = books[randomIndex];
 
@@ -37,4 +37,4 @@ function displayRandomBook() {
 }
 
 // Call the function when the page loads
-window.onload = displayRandomBook;
+window.onload = () => displayRandomBook();
