@@ -53,7 +53,6 @@ const displayBooks = () => {
                 <img src="${book.imgSrc}" alt="${book.title}">
                 <h3>${book.title}</h3>
                 <p>${book.description}</p>
-                <a href="${book.pdfLink}" class="btn">Read Now</a>
             </div>
         `;
         bookListContainer.innerHTML += bookItem;

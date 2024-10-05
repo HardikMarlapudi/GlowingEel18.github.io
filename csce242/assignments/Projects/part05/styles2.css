@@ -11,14 +11,14 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
-    padding: auto;
+    padding: 0; /* Remove auto padding */
 }
 
 /* Header Styles */
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 20px 0; /* Adjust padding for uniform top and bottom spacing */
     text-align: center;
 }
 
@@ -30,40 +30,37 @@ header h1 {
 
 header p {
     font-size: 1.2em;
+    margin-top: 10px; /* Add margin to space below the paragraph */
 }
 
 /* Navbar Styles */
-
-nav ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s;
-}
-
-
 .navbar {
     list-style-type: none;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Center navbar */
+    gap: 15px; /* Add spacing between navbar items */
+    padding: 10px 0;
 }
 
 .navbar li {
-    display: inline-block;
-    margin: 30px;
+    margin: 10px; /* Remove additional margin */
 }
 
 .navbar li a {
     color: white;
     text-decoration: none;
-    background-color: #444;
-    padding: 10px;
+    font-size: 15px;
+    background-color: #555;
+    padding: 10px 15px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .navbar li a:hover {
     background-color: #777;
 }
 
+/* Categories Section */
 .categories {
     padding: 50px 20px;
     background-color: #ffffff;
@@ -92,6 +89,7 @@ nav ul li a{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    padding: 20px 10px; /* Add padding for spacing */
 }
 
 /* Book Items */
@@ -104,6 +102,7 @@ nav ul li a{
     text-align: center;
     transition: transform 0.3s ease;
     flex-basis: calc(33.33% - 20px); /* 3 items per row on desktop */
+    margin-bottom: 20px; /* Add margin to space between rows */
 }
 
 .book-item:hover {
@@ -111,7 +110,7 @@ nav ul li a{
 }
 
 .book-item img {
-    max-width: 45%;
+    max-width: 60%; /* Increase image size for better display */
     height: auto;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -139,7 +138,7 @@ footer {
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
-    /* Book grid stacks into one column */
+    /* Stack book grid items into one column */
     .book-grid {
         flex-direction: column;
     }
@@ -149,8 +148,11 @@ footer {
         margin-bottom: 20px;
     }
 
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
     .navbar li {
-        display: block; /* Stack navigation links vertically */
         margin-bottom: 10px;
     }
 
@@ -167,6 +169,6 @@ footer {
     }
 
     .book-item img {
-        width: 45%; /* Smaller image size for mobile */
+        width: 70%; /* Slightly larger images for mobile view */
     }
 }
