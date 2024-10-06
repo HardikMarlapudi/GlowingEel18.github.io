@@ -38,3 +38,9 @@ function displayRandomBook() {
 
 // Call the function when the page loads
 window.onload = () => displayRandomBook();
+
+// JavaScript to reload/refresh the page when the "More..." button is clicked
+document.getElementById('moreButton').addEventListener('click', () => {
+    // You can refresh the page using location.reload() method
+    location.reload();
+});

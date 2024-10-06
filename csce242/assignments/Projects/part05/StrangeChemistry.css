@@ -19,6 +19,7 @@ body {
 
 .welcome-section p {
     color: white;
+    font-size: 24px;
 }
 
 nav {
@@ -42,8 +43,6 @@ nav ul {
 nav ul li {
     margin: 0 10px;
 }
-
-
 
 nav ul li a {
     text-decoration: none;

@@ -86,6 +86,28 @@ nav ul li a:hover {
     font-size: 1rem;
 }
 
+/* Style for the "More..." button */
+.more-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#moreButton {
+    background-color: #333; /* Soft blue color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#moreButton:hover {
+    background-color: #444;
+}
+
+
 /* Footer */
 footer {
     background-color: #333;

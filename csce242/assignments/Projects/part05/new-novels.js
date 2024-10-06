@@ -61,3 +61,9 @@ const displayBooks = () => {
 
 // Run the function to display books when the page loads using arrow function
 window.onload = () => displayBooks();
+
+// JavaScript to reload/refresh the page when the "More..." button is clicked
+document.getElementById('moreButton').addEventListener('click', () => {
+    // You can refresh the page using location.reload() method
+    location.reload();
+});

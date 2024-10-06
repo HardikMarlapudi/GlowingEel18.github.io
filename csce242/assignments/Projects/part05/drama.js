@@ -49,3 +49,9 @@ const displayRandomDramaBook = () => {
 
 // Call the function to display the book when the page loads
 window.onload = displayRandomDramaBook;
+
+// JavaScript to reload/refresh the page when the "More..." button is clicked
+document.getElementById('moreButton').addEventListener('click', () => {
+    // You can refresh the page using location.reload() method
+    location.reload();
+});
