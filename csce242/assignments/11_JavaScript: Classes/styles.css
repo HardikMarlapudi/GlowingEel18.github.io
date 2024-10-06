@@ -1,7 +1,7 @@
 /* Body styling to match background and center content */
 body {
     background-color: #f8f8e9; /* Light off-white background */
-    font-family: Arial, sans-serif; /* Cleaner font */
+    font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -11,8 +11,8 @@ body {
 @media (max-width: 600px) {
     /* Bird container layout becomes a column */
     .bird-container {
-        flex-direction: column; /* Make items stack in a column */
-        align-items: top-left; /* Center the items */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the items horizontally */
     }
 
     /* Bird items take full width */
@@ -203,11 +203,13 @@ footer {
     }
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     position: fixed;
+    font-size: 15px;
     bottom: 0;
     width: 100%;
 }
