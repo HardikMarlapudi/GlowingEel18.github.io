@@ -13,34 +13,28 @@ class Bird {
     }
 
     // Method to return the HTML section for a bird item (name and image)
-    getSection() {
-        return `
-            <section class="bird-item">
-                <h3>${this.name}</h3>
-                <img src="images/${this.image}" alt="${this.name}">
-            </section>
-        `;
-    }
+    getSection = () => `
+        <section class="bird-item">
+            <h3>${this.name}</h3>
+            <img src="images/${this.image}" alt="${this.name}">
+        </section>
+    `;
 
     // Method to return all the information formatted as a section for the modal
-    getExpandedSection() {
-        return `
-            <section class="bird-details">
-                <img src="images/${this.image}" alt="${this.name}">
-                <div class="bird-details-content">
-                    <h3>${this.name}</h3>
-                    <p><strong>Size:</strong> ${this.species}</p>
-                    <p><strong>Lifespan:</strong> ${this.lifespan}</p>
-                    <p><strong>Food:</strong> ${this.food}</p>
-                    <p><strong>Habitat:</strong> ${this.habitat}</p>
-                    <p><strong>Interesting Fact:</strong> ${this.fact}</p>
-                    
-                    <!-- Mini paragraph after Interesting Fact -->
-                    <p>Tiny little colorful birds, that bring joy to everyone:)</p>
-                </div>
-            </section>
-        `;
-    }
+    getExpandedSection = () => `
+        <section class="bird-details">
+            <img src="images/${this.image}" alt="${this.name}">
+            <div class="bird-details-content">
+                <h3>${this.name}</h3>
+                <p><strong>Size:</strong> ${this.species}</p>
+                <p><strong>Lifespan:</strong> ${this.lifespan}</p>
+                <p><strong>Food:</strong> ${this.food}</p>
+                <p><strong>Habitat:</strong> ${this.habitat}</p>
+                <p><strong>Interesting Fact:</strong> ${this.fact}</p>
+                <p>Tiny little colorful birds that bring joy to everyone :)</p>
+            </div>
+        </section>
+    `;
 }
 
 // Array of bird objects
@@ -52,7 +46,7 @@ const birds = [
 ];
 
 // Function to display the bird list on the page
-function displayBirds() {
+const displayBirds = () => {
     const birdContainer = document.getElementById('birdContainer');
     birds.forEach((bird, index) => {
         const birdSection = document.createElement('div');
@@ -60,23 +54,23 @@ function displayBirds() {
         birdSection.addEventListener('click', () => showBirdDetails(index));
         birdContainer.appendChild(birdSection);
     });
-}
+};
 
 // Function to display modal with bird details
-function showBirdDetails(birdIndex) {
+const showBirdDetails = (birdIndex) => {
     const bird = birds[birdIndex];
     const modalContent = document.getElementById('modalContent');
     modalContent.innerHTML = bird.getExpandedSection();
     document.getElementById('birdModal').style.display = 'block';
-}
+};
 
 // Function to close the modal
-function closeModal() {
+const closeModal = () => {
     document.getElementById('birdModal').style.display = 'none';
-}
+};
 
 // Initialize bird display and add event listener to close modal
-window.onload = function() {
+window.onload = () => {
     displayBirds();
     document.getElementById('closeModal').addEventListener('click', closeModal);
 };
