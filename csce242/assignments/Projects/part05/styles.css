@@ -1248,3 +1248,12 @@ width: 100%;
       padding: 20px 10px;
   }
 }
+
+.search-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,92 +1,186 @@
-/* General page styling */
+/* Body styling to match background and center content */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f8f8e9; /* Light off-white background */
+    font-family: Arial, sans-serif; /* Cleaner font */
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
 }
 
-/* Page header */
-h1 {
-    margin-top: 20px;
+/* Styling for the assignment heading */
+h2 {
+    font-size: 2.5em;
+    color: #4A90E2; /* Soft blue for heading */
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
-/* Bird card grid layout */
-.bird-grid {
+.w3-text {
+    font-size: 1.5em;
+}
+
+.bird-details {
+    color: #333;
+    text-align: left;
+}
+
+/* Subheading for 'Classes' */
+h3.subtitle {
+    font-size: 1.8em;
+    color: #d64b47; /* Red for subheading */
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Container for the bird items */
+.bird-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    margin: 40px;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
 }
 
-/* Individual bird card styling */
-.bird-card {
-    width: 200px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: skyblue;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Styling for each bird box */
+.bird-item {
+    width: 220px; /* Width of the card */
+    height: 100%;
+    margin: 20px;
+    text-align: center;
     cursor: pointer;
-    transition: transform 0.2s;
+    background-color: #b3e5fc; /* Light blue background */
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a slight floating effect */
 }
 
-.bird-card:hover {
-    transform: scale(1.05);
+.bird-item:hover {
+    transform: scale(1.05); /* Zoom on hover */
 }
 
-/* Bird image */
-.bird-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+/* Bird images inside each box */
+.bird-item img {
+    width: 200px; /* Standardized image width */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Crop images if needed */
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-/* Modal window */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+/* Bird titles */
+.bird-item h3 {
+    font-size: 1.5em;
+    color: #000; /* Dark text */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Footer text styling */
+footer {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* Modal overlay: covers the entire page */
+.w3-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning */
+    z-index: 1; /* Stay on top */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
 }
 
-/* Modal content styling */
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
+/* Modal content: center the modal box */
+.w3-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    background-color: #fff; /* White background */
+    max-width: 900px;
+    width: 90%; /* Responsive width */
+    padding: 30px;
     border-radius: 8px;
-    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 /* Close button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.w3-modal .w3-button.w3-display-topright {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
     cursor: pointer;
+    color: black;
 }
 
-/* Styling for the modal content */
-.modal img {
-    width: 100%;
+/* Flexbox layout for modal content */
+.bird-details {
+    display: flex;
+    flex-direction: row-reverse; /* Swap the image to the right */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Styling for the bird image inside the modal */
+.bird-details img {
+    width: 300px; /* Larger image */
     height: auto;
-    margin-bottom: 20px;
+    margin-left: 20px; /* Space between image and text */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styling for the text content inside the modal */
+.bird-details-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Responsive handling for small screens */
+@media (max-width: 600px) {
+    .bird-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bird-item {
+        width: 90%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3.subtitle {
+        font-size: 1.5em;
+    }
+
+    .bird-details {
+        flex-direction: column;
+    }
+
+    .bird-details img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

@@ -1,70 +1,70 @@
 // Bird class definition
 class Bird {
-    constructor(name, size, lifespan, food, habitat, interestingFact, imageUrl) {
+    constructor(name, species, image, habitat, diet, size, lifespan, food, fact) {
         this.name = name;
+        this.species = species;
+        this.image = image;
+        this.habitat = habitat;
+        this.diet = diet;
         this.size = size;
         this.lifespan = lifespan;
         this.food = food;
-        this.habitat = habitat;
-        this.interestingFact = interestingFact;
-        this.imageUrl = imageUrl;
+        this.fact = fact;
     }
 
-    // Method to return a basic section for the bird (card)
+    // Method to return the HTML section for a bird item (name and image)
     getSection() {
-        // Create the bird card element
-        const card = document.createElement('div');
-        card.className = 'bird-card';
-        
-        // Set up the bird card content
-        const cardContent = `
-            <h3>${this.name}</h3>
-            <img src="${this.imageUrl}" alt="${this.name}">
+        return `
+            <section class="bird-item">
+                <h3>${this.name}</h3>
+                <img src="images/${this.image}" alt="${this.name}">
+            </section>
         `;
-        card.innerHTML = cardContent;
-
-        // Add an event listener to the card for the modal
-        card.addEventListener('click', () => {
-            showModal(this);
-        });
-
-        return card;
     }
 
-    // Method to return the expanded section for the modal
+    // Method to return all the information formatted as a section for the modal
     getExpandedSection() {
         return `
-            <div>
-                <h2>${this.name}</h2>
-                <img src="${this.imageUrl}" alt="${this.name}">
-                <p><strong>Size:</strong> ${this.size}</p>
-                <p><strong>Lifespan:</strong> ${this.lifespan}</p>
-                <p><strong>Food:</strong> ${this.food}</p>
-                <p><strong>Habitat:</strong> ${this.habitat}</p>
-                <p><strong>Interesting Fact:</strong> ${this.interestingFact}</p>
-            </div>
+            <section class="bird-details">
+                <img src="images/${this.image}" alt="${this.name}">
+                <div class="bird-details-content">
+                    <h3>${this.name}</h3>
+                    <p><strong>Size:</strong> ${this.species}</p>
+                    <p><strong>Lifespan:</strong> ${this.lifespan}</p>
+                    <p><strong>Food:</strong> ${this.food}</p>
+                    <p><strong>Habitat:</strong> ${this.habitat}</p>
+                    <p><strong>Interesting Fact:</strong> ${this.fact}</p>
+                    
+                    <!-- Mini paragraph after Interesting Fact -->
+                    <p>Tiny little colorful birds, that bring joy to everyone:)</p>
+                </div>
+            </section>
         `;
     }
 }
 
 // Array of bird objects
 const birds = [
-    new Bird("Hummingbird", "2.5 inches", "3-5 years", "Nectar", "Trees", "Nicknamed 'Hummers'", "images/hummingbird.jpg"),
-    new Bird("Blue Jay", "9-12 inches", "7 years", "Seeds, Nuts", "Forests", "Can mimic hawks", "images/bluejay.jpg"),
-    new Bird("Cardinal", "8-9 inches", "3 years", "Seeds", "Woodlands", "Known for bright red color", "images/cardinal.jpg"),
-    new Bird("Robin", "10 inches", "2 years", "Insects, Worms", "Gardens", "Famous for early morning songs", "images/robin.jpg")
+    new Bird('Hummingbird', '2.5 inches', 'hummingbird.jpg', 'Trees', 'Nectar (Sugar Water)', 'Tiny', '3-5 years', 'Nectar (Sugar Water)', 'They are nicknamed "Hummers"'),
+    new Bird('Blue Jay', '10-12 inches', 'blueJay.jpg', 'Forests', 'Insects, nuts, seeds', 'Medium', '7 years', 'Insects, nuts, seeds', 'Known for their intelligence.'),
+    new Bird('Cardinal', '8-9 inches', 'cardinal.jpg', 'Woodlands', 'Seeds, fruit, insects', 'Small', '3-6 years', 'Seeds, fruit, insects', 'They don’t migrate during the winter.'),
+    new Bird('Robin', '9-11 inches', 'robin.jpg', 'Gardens, forests', 'Worms, fruit, insects', 'Medium', '2 years', 'Worms, fruit, insects', 'Robins are often seen during spring.')
 ];
 
-// Function to display the bird cards in the DOM
+// Function to display the bird list on the page
 function displayBirds() {
     const birdContainer = document.getElementById('birdContainer');
-    birds.forEach(bird => {
-        birdContainer.appendChild(bird.getSection());
+    birds.forEach((bird, index) => {
+        const birdSection = document.createElement('div');
+        birdSection.innerHTML = bird.getSection();
+        birdSection.addEventListener('click', () => showBirdDetails(index));
+        birdContainer.appendChild(birdSection);
     });
 }
 
-// Function to show the modal with detailed bird info
-function showModal(bird) {
+// Function to display modal with bird details
+function showBirdDetails(birdIndex) {
+    const bird = birds[birdIndex];
     const modalContent = document.getElementById('modalContent');
     modalContent.innerHTML = bird.getExpandedSection();
     document.getElementById('birdModal').style.display = 'block';
@@ -75,16 +75,8 @@ function closeModal() {
     document.getElementById('birdModal').style.display = 'none';
 }
 
-// Add event listener for close button
-document.querySelector('.close').addEventListener('click', closeModal);
-
-// Close modal if clicked outside the modal content
-window.addEventListener('click', (event) => {
-    const modal = document.getElementById('birdModal');
-    if (event.target === modal) {
-        closeModal();
-    }
-});
-
-// Display birds when the page loads
-document.addEventListener('DOMContentLoaded', displayBirds);
+// Initialize bird display and add event listener to close modal
+window.onload = function() {
+    displayBirds();
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+};
