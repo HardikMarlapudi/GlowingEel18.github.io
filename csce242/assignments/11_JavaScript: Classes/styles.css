@@ -7,36 +7,61 @@ body {
     padding: 0;
 }
 
-/* Styling for the assignment heading */
-h2 {
-    font-size: 2.5em;
-    color: #4A90E2; /* Soft blue for heading */
-    margin-bottom: 10px;
-    margin-top: 30px;
+/* Responsive handling for small screens */
+@media (max-width: 600px) {
+    /* Bird container layout becomes a column */
+    .bird-container {
+        flex-direction: column; /* Make items stack in a column */
+        align-items: top-left; /* Center the items */
+    }
+
+    /* Bird items take full width */
+    .bird-item {
+        width: 90%; /* Take most of the screen's width */
+        margin-bottom: 20px; /* Add space between items */
+    }
+
+    /* Adjust heading size */
+    h2 {
+        font-size: 2em; /* Make heading smaller on small screens */
+    }
+
+    /* Adjust subtitle size */
+    h3.subtitle {
+        font-size: 1.5em; /* Make subtitle smaller */
+    }
+
+    /* Modal details layout becomes a column */
+    .bird-details {
+        flex-direction: column; /* Stack the image and content vertically */
+        align-items: center; /* Center content */
+    }
+
+    /* Modal image becomes full width */
+    .bird-details img {
+        margin-bottom: 20px; /* Add margin below the image */
+        width: 100%; /* Make image take full width */
+    }
+
+    /* Modal content is centered */
+    .bird-details-content {
+        text-align: center; /* Center the text content */
+        padding-right: 0; /* Remove extra padding */
+    }
+
+    /* Center the modal on smaller screens */
+    .w3-modal-content {
+        width: 95%; /* Ensure the modal takes most of the screen width */
+        padding: 20px;
+    }
 }
 
-.w3-text {
-    font-size: 1.5em;
-}
-
-.bird-details {
-    color: #333;
-    text-align: left;
-}
-
-/* Subheading for 'Classes' */
-h3.subtitle {
-    font-size: 1.8em;
-    color: #d64b47; /* Red for subheading */
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-/* Container for the bird items */
+/* Center the bird container */
 .bird-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; /* Centers the items */
+    align-items: center; /* Aligns items vertically */
     margin-top: 20px;
     padding: 20px;
 }
@@ -125,24 +150,26 @@ footer {
 .bird-details {
     display: flex;
     flex-direction: row-reverse; /* Swap the image to the right */
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
     justify-content: space-between;
     padding: 20px;
-}
-
-/* Styling for the bird image inside the modal */
-.bird-details img {
-    width: 300px; /* Larger image */
-    height: auto;
-    margin-left: 20px; /* Space between image and text */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Styling for the text content inside the modal */
 .bird-details-content {
     flex: 1;
-    padding-right: 20px;
+    text-align: left; /* Align text to the left */
+    padding-right: 20px; /* Padding for space between text and image */
+    margin-top: 0; /* Remove any top margin */
+}
+
+/* Adjust the modal image for consistency */
+.bird-details img {
+    width: 300px;
+    height: auto;
+    margin-left: 20px; /* Space between image and text */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive handling for small screens */
