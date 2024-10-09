@@ -67,4 +67,4 @@ const displayIceCreams = (iceCreams) => {
 };
 
 // Call the function to fetch and display ice creams when the page loads
-fetchIceCreams();
+window.onload = () => fetchIceCreams();
