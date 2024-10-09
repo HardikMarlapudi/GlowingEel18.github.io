@@ -1,16 +1,24 @@
 /* General styling */
-body {
+html, body {
+    height: 100%; /* Make the body and html take up the full viewport height */
     font-family: Arial, sans-serif;
     background-color: #f9f4e8; /* Match background color from image */
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Flexbox for body to position footer at the bottom */
 }
 
 h1 {
     color: #ff4081;
     margin: 30px 0; /* More margin at the top */
     font-size: 2.5em;
+}
+
+/* Main content container */
+.main-content {
+    flex: 1; /* This makes the main content take up remaining space */
 }
 
 /* Ice cream container styling */
@@ -64,15 +72,13 @@ h1 {
 
 /* Footer styling */
 footer {
-    text-align: center;
     background-color: #f9f4e8;
     padding: 20px 0; /* Smaller padding for the top and bottom */
     margin-top: 20px;
     font-family: Arial, sans-serif;
     color: #6e6e6e;
-    position: relative;
+    text-align: center;
 }
-
 
 footer a {
     color: #6e6e6e;
