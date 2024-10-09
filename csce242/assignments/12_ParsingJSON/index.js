@@ -1,5 +1,5 @@
 // Async function to fetch the JSON data
-async function fetchIceCreams() {
+const fetchIceCreams = async () => {
     try {
         // Fetching the JSON data asynchronously
         const response = await fetch('https://portiaportia.github.io/json/ice-creams.json');
@@ -22,10 +22,10 @@ async function fetchIceCreams() {
             container.innerHTML = '<p>Failed to load ice cream data. Please try again later.</p>';
         }
     }
-}
+};
 
-// Function to display the ice creams on the page
-function displayIceCreams(iceCreams) {
+// Arrow function to display the ice creams on the page
+const displayIceCreams = (iceCreams) => {
     const container = document.getElementById('ice-cream-container');
 
     // Ensure the container exists
@@ -64,7 +64,7 @@ function displayIceCreams(iceCreams) {
         // Append ice cream item to container
         container.appendChild(iceCreamItem);
     });
-}
+};
 
 // Call the function to fetch and display ice creams when the page loads
 fetchIceCreams();
