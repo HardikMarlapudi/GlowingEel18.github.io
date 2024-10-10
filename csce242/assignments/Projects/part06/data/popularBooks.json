@@ -1,0 +1,14 @@
+{
+  "books": [
+    { "img": "New Novels.jpg", "title": "New Novels", "description": "A fantastic new novel.", "link": "new-novels.html" },
+    { "img": "Mystery.jpg", "title": "Mystery", "description": "A bestselling mystery.", "link": "mystery.html" },
+    { "img": "Fantasy.jpg", "title": "Fantasy", "description": "An exciting fantasy.", "link": "fantasy.html" },
+    { "img": "Drama.jpg", "title": "Drama", "description": "A thrilling crime drama.", "link": "drama.html" },
+    { "img": "Fiction2.jpg", "title": "Fiction", "description": "A gripping historical fiction.", "link": "fiction.html" },
+    { "img": "NonFiction2.jpg", "title": "Nonfiction", "description": "An inspiring non-fiction.", "link": "NonFiction.html" },
+    { "img": "Romance.jpg", "title": "Romance", "description": "A heartwarming romance.", "link": "romance.html" },
+    { "img": "Scientific Mystery.jpg", "title": "Scientific Mystery", "description": "A deep dive into a scientific mystery.", "link": "scientific-mystery.html" },
+    { "img": "Sci-Fi.jpg", "title": "Sci-Fi", "description": "An adventurous sci-fi journey.", "link": "sci-fi.html" },
+    { "img": "Horror.jpg", "title": "Horror", "description": "A terrifying horror story.", "link": "horror.html" }
+  ]
+}
