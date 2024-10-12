@@ -68,51 +68,43 @@ document.addEventListener('DOMContentLoaded', () => {
 }); */
 
 const getGenres = async () => {
-    const url = "file:///Users/hardikmarlapudi/Desktop/GlowingEel18.github.io-1/csce242/assignments/Projects/part06/data/popularBooks.json";
+    const url = "https://glowingeel18.github.io/csce242/assignments/Projects/part06/data/popularBooks.json";
 
     try {
         const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
         return await response.json();
-    } catch (error) {
-        console.log("Error fetching genres: ", error);
+    } catch(error){
+        console.log(error);
     }
 };
 
 const showGenres = async () => {
     let genres = await getGenres();
-    if (!genres) return;
 
-    const genresSection = document.querySelector('main');
-
-    genres.forEach((genre) => {
-        genresSection.append(getGenreItem(genre));
+    genres.forEach((genre)=> {
+     genresSection.append(getGenreItem(genre));
     });
 };
 
 const getGenreItem = (genre) => {
-    let section = document.createElement("section");
+    let section = docuemnt.createElement("section");
 
     let h3 = document.createElement("h3");
-    h3.innerText = genre.name;
+    h3.innerText = genre.books;
     section.append(h3);
 
     let ul = document.createElement("ul");
     section.append(ul);
-
-    genre.books.forEach((book) => {
-        ul.append(getLi(book));
-    });
+    ul.append(getLi(genre.type));
+    ul.append(getLi(`Pr`))
 
     return section;
 };
 
-const getLi = (data) => {
+const getLi = data => {
     const li = document.createElement("li");
-    li.innerText = data;
+    ul.append(getLi(shoe))
     return li;
-};
+}
 
 window.onload = () => showGenres();
