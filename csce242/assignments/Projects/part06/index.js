@@ -1,86 +1,118 @@
-// Async function to fetch the JSON data and replace the HTML elements
-const fetchBooks = async () => {
+// Function to fetch the JSON data and display it in an HTML table
+/* async function fetchAndDisplayData() {
     try {
-        console.log('Fetching books...');  // Log that the fetch has started
-        
-        // Fetching the JSON data asynchronously
-        const response = await fetch('./data/popularBooks.json'); // Ensure this path is correct
-        
-        // Check if the fetch was successful
+        // Fetch the data from the JSON file
+        const response = await fetch('popularBooks.json');
+
+        // Check if the fetch request was successful
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error('Failed to fetch data');
         }
 
-        // Parsing the response as JSON
+        // Parse the JSON data
         const data = await response.json();
-        console.log('Books fetched successfully:', data); // Log the fetched data
 
-        const books = data.books;
-        if (!books || books.length === 0) {
-            throw new Error('No books found in the JSON data.');
+        // Get the container where we will display the data
+        const container = document.getElementById('data-container');
+
+        // Create a table element
+        const table = document.createElement('table');
+        table.classList.add('data-table');
+
+        // Check if data is an array and is not empty
+        if (Array.isArray(data) && data.length > 0) {
+            // Create the header row from the keys of the first object
+            const headerRow = document.createElement('tr');
+            Object.keys(data[0]).forEach(key => {
+                const th = document.createElement('th');
+                th.textContent = key;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            // Create a row for each object in the array
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                Object.values(item).forEach(value => {
+                    const cell = document.createElement('td');
+                    cell.textContent = value;
+                    row.appendChild(cell);
+                });
+                table.appendChild(row);
+            });
+
+            // Append the table to the container
+            container.appendChild(table);
+        } else {
+            // If no data is available
+            container.innerHTML = '<p>No data available to display.</p>';
         }
-
-        // Call the function to display books dynamically
-        replaceHTMLWithBooks(books);
     } catch (error) {
-        console.error('Error fetching the books:', error);
-        const container = document.getElementById('book-grid');
-        if (container) {
-            container.innerHTML = '<p>Failed to load book data. Please try again later.</p>';
+        console.error('Error fetching and displaying data:', error);
+        document.getElementById('data-container').innerHTML = '<p>Failed to load data. Please try again later.</p>';
+    }
+}
+
+// Call the function to fetch and display data when the page loads
+document.addEventListener('DOMContentLoaded', fetchAndDisplayData);
+
+// JavaScript to handle the hamburger menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.querySelector('.navbar');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-active');
+        navbar.classList.toggle('active');
+    });
+}); */
+
+const getGenres = async () => {
+    const url = "file:///Users/hardikmarlapudi/Desktop/GlowingEel18.github.io-1/csce242/assignments/Projects/part06/data/popularBooks.json";
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        return await response.json();
+    } catch (error) {
+        console.log("Error fetching genres: ", error);
     }
 };
 
-// Function to replace HTML elements with data from the JSON file
-const replaceHTMLWithBooks = (books) => {
-    const container = document.querySelector('.book-grid');
-    console.log('Replacing HTML with fetched books...');  // Log that book rendering is starting
+const showGenres = async () => {
+    let genres = await getGenres();
+    if (!genres) return;
 
-    // Ensure the container exists
-    if (!container) {
-        console.error('Error: .book-grid not found');
-        return;
-    }
+    const genresSection = document.querySelector('main');
 
-    // Clear any existing content in the container
-    container.innerHTML = '';
+    genres.forEach((genre) => {
+        genresSection.append(getGenreItem(genre));
+    });
+};
 
-    books.forEach((book, index) => {
-        console.log(`Rendering book ${index + 1}:`, book);  // Log each book as it is being rendered
+const getGenreItem = (genre) => {
+    let section = document.createElement("section");
 
-        // Create div for each book
-        const bookItem = document.createElement('div');
-        bookItem.classList.add('book-item');
-        bookItem.id = `book${index + 1}`;
+    let h3 = document.createElement("h3");
+    h3.innerText = genre.name;
+    section.append(h3);
 
-        // Create img element, ensure the image exists in JSON
-        const img = document.createElement('img');
-        img.src = book.img ? `images/${book.img}` : 'images/default.jpg'; // Fallback to 'default.jpg' if no image is provided
-        img.alt = book.title ? book.title : 'Book Image';
+    let ul = document.createElement("ul");
+    section.append(ul);
 
-        // Create anchor element for title
-        const link = document.createElement('a');
-        link.href = book.link ? book.link : '#'; // Fallback link if none provided
-        link.target = "_blank";
-        const title = document.createElement('h3');
-        title.textContent = book.title ? book.title : 'Untitled Book'; // Fallback title if none provided
-        link.appendChild(title);
-
-        // Create p element for the description
-        const description = document.createElement('p');
-        description.textContent = book.description ? book.description : 'No description available.'; // Fallback description
-
-        // Append img, link, and description to the book item
-        bookItem.appendChild(img);
-        bookItem.appendChild(link);
-        bookItem.appendChild(description);
-
-        // Append the book item to the container
-        container.appendChild(bookItem);
+    genre.books.forEach((book) => {
+        ul.append(getLi(book));
     });
 
-    console.log('Book rendering completed.');
+    return section;
 };
 
-// Call the function to fetch and display books when the page loads
-window.onload = () => fetchBooks();
+const getLi = (data) => {
+    const li = document.createElement("li");
+    li.innerText = data;
+    return li;
+};
+
+window.onload = () => showGenres();

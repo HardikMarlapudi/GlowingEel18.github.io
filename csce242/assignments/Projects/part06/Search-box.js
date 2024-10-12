@@ -53,3 +53,28 @@ function searchBook(searchText) {
         window.location.href = googleSearchUrl;
     }
 }
+
+// JavaScript to handle the hamburger menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.querySelector('.navbar');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-active');
+        navbar.classList.toggle('active');
+    });
+
+    // Search functionality (optional)
+    const searchForm = document.getElementById('search-form');
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const searchInput = document.getElementById('search-input').value.trim();
+        if (searchInput) {
+            console.log('Searching for:', searchInput);
+            // Implement your search logic here
+            alert(`Searching for: ${searchInput}`);
+        } else {
+            alert('Please enter a search term');
+        }
+    });
+});

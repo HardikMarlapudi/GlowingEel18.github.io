@@ -8,3 +8,14 @@ document.getElementById('reveal-fact').addEventListener('click', function() {
         this.textContent = 'Reveal a Fun Fact';
     }
 });
+
+// JavaScript to handle the hamburger menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.querySelector('.navbar');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-active');
+        navbar.classList.toggle('active');
+    });
+});

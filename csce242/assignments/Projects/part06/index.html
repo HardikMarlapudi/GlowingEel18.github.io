@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Webpage</title>
+    <title>Library Webpage with Hamburger Menu</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <!-- Main Header -->
+    <!-- Header Section -->
     <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <h1>Welcome to the Library Webpage Program</h1>
         <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
-        <!-- Navigation Bar -->
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -23,14 +27,10 @@
     </header>
 
     <main>
-        <!-- Most Popular Books Section -->
+    <!-- Most Popular Books Section with 10 books -->
         <section class="popular-books">
             <h2>Explore our Genres</h2>
-            <div class="book-grid" id="book-grid">
-                <!-- Book items will be loaded here dynamically -->
-            </div>
-        </section>
-    </main>
+
 
     <footer>
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
