@@ -70,29 +70,30 @@ h1 {
     opacity: 1;
 }
 
-/* Footer styling */
 footer {
-    background-color: #f9f4e8;
-    padding: 20px 0; /* Smaller padding for the top and bottom */
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
-    color: #6e6e6e;
-    text-align: center;
-}
-
-footer a {
-    color: #6e6e6e;
+    width: 100%;
+    text-align: center; /* Center the text */
+    position: fixed; /* Make the footer stick at the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0;
+    background-color: #f5f5dc; /* Match background color */
+    padding: 10px 0; /* Add padding for spacing */
+    font-size: 0.9em; /* Adjust font size */
+    color: #555;
+  }
+  
+  footer p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  footer a {
     text-decoration: none;
-}
-
-footer a:hover {
+    color: blue;
+  }
+  
+  footer a:hover {
     text-decoration: underline;
-}
-
-footer p {
-    margin: 5px;
-    font-size: 14px;
-}
+  }
 
 /* Add some spacing for freepik credit and copyright */
 footer .credits {
