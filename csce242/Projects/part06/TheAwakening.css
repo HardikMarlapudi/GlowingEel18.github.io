@@ -29,22 +29,22 @@ nav {
     justify-content: center;
     align-items: center;
     margin: 0; /* Ensure no margin at the top or bottom */
-    border-top: none; /* Optional: Remove border if added */
 }
 
-nav ul {
+.navbar {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Ensure no extra space */
+    margin: 0;
     display: flex;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
-nav ul li {
+.navbar li {
     margin: 0 10px;
 }
 
-nav ul li a {
+.navbar li a {
     text-decoration: none;
     color: white;
     padding: 10px 15px;
@@ -54,27 +54,59 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+.navbar li a:hover {
     background-color: #444;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
 /* Responsive Navbar - Mobile View */
 @media (max-width: 768px) {
-    nav ul {
+    nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        display: none;
     }
 
-    nav ul li {
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
         margin: 10px 0;
     }
 
-    nav ul li a {
+    .navbar li a {
         width: 100%;
         text-align: center;
-        padding: 5px;
+        padding: 10px;
         font-size: 1.3rem;
+    }
+
+    .menu-toggle.is-active .bar {
+        background-color: #ccc;
     }
 }
 
@@ -144,9 +176,4 @@ footer {
     bottom: 0;
     width: 100%;
     font-family: 'Arial', serif;
-}
-
-/* Hidden Fact */
-.hidden {
-    display: none;
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Smoke & Mirrors by Neil Gaiman</title>
-    <link rel="stylesheet" href="Smoke&Mirrors.css"> <!-- Link to the correct CSS file -->
+    <link rel="stylesheet" href="Smoke&Mirrors.css">
 </head>
 <body>
     <!-- Welcome Section -->
@@ -16,7 +16,13 @@
 
     <!-- Navbar Section -->
     <nav>
-        <ul>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the App</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -24,7 +30,7 @@
         </ul>
     </nav>
 
-    <!-- Main Content Section for Smoke & Mirrors -->
+    <!-- Main Content Section -->
     <div class="container">
         <header>
             <h2>Smoke & Mirrors</h2>
@@ -32,31 +38,29 @@
         </header>
 
         <section class="book-cover">
-            <img src="Smoke and Mirrors.jpg" alt="Smoke and Mirrors Book Cover" class="cover">
+            <img src="images/Smoke and Mirrors.jpg" alt="Smoke & Mirrors Book Cover" class="cover">
         </section>
 
         <section class="book-info">
             <h3>Overview</h3>
             <p>
-                <em>Smoke & Mirrors: Short Fictions and Illusions</em> is a collection of short stories and poems by Neil Gaiman, first published in 1998. The book contains tales of fantasy, horror, and the surreal, showcasing Gaiman's ability to blend genres and play with the boundaries between reality and fiction. The stories explore themes such as myth, magic, and the dark corners of the human mind.
+                <em>Smoke & Mirrors</em> is a collection of short stories and poems by Neil Gaiman, first published in 1998. The stories span a wide range of genres, from horror to fantasy to science fiction, with themes of love, loss, and the supernatural. Gaiman’s unique storytelling and ability to weave together the bizarre and the familiar make this collection a must-read for fans of speculative fiction.
             </p>
         </section>
 
         <section class="characters">
-            <h3>Notable Stories</h3>
+            <h3>Main Characters</h3>
             <ul>
-                <li><strong>Chivalry:</strong> A humorous story about an elderly woman who buys the Holy Grail in a secondhand shop.</li>
-                <li><strong>The Price:</strong> A mysterious story about a stray black cat who protects a family from an unseen evil.</li>
-                <li><strong>Shoggoth's Old Peculiar:</strong> A Lovecraftian tale with a comedic twist set in a seaside town.</li>
-                <li><strong>The Goldfish Pool and Other Stories:</strong> A semi-autobiographical tale of Hollywood and its strange allure.</li>
-                <li><strong>Murder Mysteries:</strong> A noir detective story set in the realms of Heaven, investigating a cosmic murder.</li>
+                <li><strong>Various Characters:</strong> Each story features its own unique characters, exploring different themes and genres.</li>
+                <li><strong>The White Road:</strong> A reimagining of a traditional English folk tale.</li>
+                <li><strong>Chivalry:</strong> A story where a woman buys the Holy Grail from a second-hand shop.</li>
             </ul>
         </section>
 
         <section class="fun-fact">
             <h3>Fun Fact</h3>
             <button id="reveal-fact">Reveal a Fun Fact</button>
-            <p id="fact" class="hidden">The story "Chivalry" was Neil Gaiman's first published short story in a professional science fiction magazine and helped launch his short story career.</p>
+            <p id="fact" class="hidden">Neil Gaiman's *Smoke & Mirrors* includes a short story titled "Shoggoth's Old Peculiar," which is a humorous homage to the works of H.P. Lovecraft.</p>
         </section>
     </div>
 
@@ -65,6 +69,6 @@
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script src="Smoke&Mirrors.js"></script> <!-- Ensure you link the correct JS file -->
+    <script src="Smoke&Mirrors.js"></script>
 </body>
 </html>

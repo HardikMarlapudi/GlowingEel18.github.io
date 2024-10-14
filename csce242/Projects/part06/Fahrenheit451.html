@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fahrenheit 451 by Ray Bradbury</title>
-    <link rel="stylesheet" href="Fahrenheit451.css"> <!-- Link to the correct CSS file -->
+    <link rel="stylesheet" href="Fahrenheit451.css">
 </head>
 <body>
     <!-- Welcome Section -->
@@ -16,7 +16,13 @@
 
     <!-- Navbar Section -->
     <nav>
-        <ul>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the App</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -24,7 +30,7 @@
         </ul>
     </nav>
 
-    <!-- Main Content Section for Fahrenheit 451 -->
+    <!-- Main Content Section -->
     <div class="container">
         <header>
             <h2>Fahrenheit 451</h2>
@@ -38,25 +44,25 @@
         <section class="book-info">
             <h3>Overview</h3>
             <p>
-                <em>Fahrenheit 451</em> is a dystopian novel by Ray Bradbury published in 1953. The novel is set in a future society where books are banned, and "firemen" burn any that are found. It explores themes of censorship, the power of knowledge, and the dangers of a society where critical thinking is suppressed. The protagonist, Guy Montag, begins to question the purpose of his role as a fireman and seeks out books in defiance of the oppressive system.
+                <em>Fahrenheit 451</em> is a dystopian novel by Ray Bradbury, first published in 1953. The novel is set in a future society where books are banned, and firemen burn any that are found. It follows Guy Montag, a fireman who begins to question the purpose of his job and the society around him. The book explores themes of censorship, conformity, and the role of knowledge in a free society.
             </p>
         </section>
 
         <section class="characters">
             <h3>Main Characters</h3>
             <ul>
-                <li><strong>Guy Montag:</strong> The protagonist, a fireman who starts to question his society's norms.</li>
+                <li><strong>Guy Montag:</strong> The protagonist, a fireman who begins to question his role in society.</li>
+                <li><strong>Mildred Montag:</strong> Montag's wife, who is obsessed with television and disinterested in books.</li>
+                <li><strong>Captain Beatty:</strong> Montag's boss, the fire chief who strongly supports the burning of books.</li>
                 <li><strong>Clarisse McClellan:</strong> A young woman who opens Montag's eyes to the world around him.</li>
-                <li><strong>Mildred Montag:</strong> Montag's wife, who is absorbed by media and indifferent to her husband's inner struggles.</li>
-                <li><strong>Captain Beatty:</strong> The fire chief who defends the role of firemen in burning books.</li>
-                <li><strong>Professor Faber:</strong> A retired English professor who helps Montag in his journey of self-discovery.</li>
+                <li><strong>Professor Faber:</strong> A retired English professor who helps Montag in his quest for knowledge.</li>
             </ul>
         </section>
 
         <section class="fun-fact">
             <h3>Fun Fact</h3>
             <button id="reveal-fact">Reveal a Fun Fact</button>
-            <p id="fact" class="hidden">Ray Bradbury originally wrote <em>Fahrenheit 451</em> on a typewriter in the basement of a library, renting it for 10 cents per half hour!</p>
+            <p id="fact" class="hidden">Ray Bradbury wrote the first draft of <em>Fahrenheit 451</em> in the basement of UCLA's Powell Library on a typewriter that he rented for 10 cents per half hour.</p>
         </section>
     </div>
 
@@ -65,6 +71,6 @@
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script src="Fahrenheit451.js"></script> <!-- Ensure you link the correct JS file -->
+    <script src="Fahrenheit451.js"></script>
 </body>
 </html>

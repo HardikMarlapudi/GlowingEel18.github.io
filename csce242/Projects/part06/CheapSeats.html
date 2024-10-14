@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The View from the Cheap Seats by Neil Gaiman</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CheapSeats.css">
 </head>
 <body>
@@ -17,7 +16,13 @@
 
     <!-- Navbar Section -->
     <nav>
-        <ul>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the App</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -33,31 +38,29 @@
         </header>
 
         <section class="book-cover">
-            <img src="The View from the Cheap Seats.jpg" alt="The View from the Cheap Seats Book Cover" class="cover">
+            <img src="images/The View from the Cheap Seats.jpg" alt="The View from the Cheap Seats Book Cover" class="cover">
         </section>
 
         <section class="book-info">
             <h3>Overview</h3>
             <p>
-                <em>The View from the Cheap Seats</em> is a collection of non-fiction writings by Neil Gaiman. It gathers essays, speeches, introductions, and articles that reflect Gaiman’s thoughts on storytelling, literature, art, and his experiences as a writer. The book covers a broad spectrum of topics, from the importance of libraries to reflections on genre and creativity. It’s a rich, insightful look into Gaiman’s mind and his journey through the world of books and imagination.
+                <em>The View from the Cheap Seats</em> is a collection of non-fiction writings by Neil Gaiman, featuring essays, speeches, and introductions on a wide range of topics. Gaiman covers everything from literature, art, and music to the nature of storytelling, offering insights into his creative process and experiences over the years. This book is a must-read for fans of Gaiman’s work and those curious about his thoughts on the world of art and culture.
             </p>
         </section>
 
-        <section class="key-essays">
-            <h3>Key Essays</h3>
+        <section class="topics">
+            <h3>Main Topics</h3>
             <ul>
-                <li><strong>Introduction: Some Things I Believe</strong>: A reflection on storytelling and the importance of fiction.</li>
-                <li><strong>Why Our Future Depends on Libraries, Reading, and Daydreaming</strong>: A powerful speech about the essential role of libraries in society.</li>
-                <li><strong>Make Good Art</strong>: Gaiman’s famous commencement address on creativity and persistence.</li>
-                <li><strong>The Pornography of Genre</strong>: Gaiman’s thoughts on the boundaries between literary and genre fiction.</li>
-                <li><strong>What the [Very] Bad Swear Word Is a Children’s Book Anyway?</strong>: A humorous take on the categorization of children’s literature.</li>
+                <li><strong>Storytelling:</strong> Insights into the art and craft of storytelling from one of the best.</li>
+                <li><strong>Pop Culture:</strong> Gaiman’s commentary on books, movies, music, and their impact on society.</li>
+                <li><strong>Personal Experiences:</strong> Reflections on Gaiman's life, career, and the importance of creativity.</li>
             </ul>
         </section>
 
         <section class="fun-fact">
             <h3>Fun Fact</h3>
             <button id="reveal-fact">Reveal a Fun Fact</button>
-            <p id="fact" class="hidden">Gaiman delivered his famous "Make Good Art" speech at the University of the Arts in 2012, which quickly became viral, inspiring creators around the world.</p>
+            <p id="fact" class="hidden">The title <em>The View from the Cheap Seats</em> refers to Neil Gaiman's perspective on life and the world of art as someone who grew up loving books and stories from a distance, but is now at the center of it.</p>
         </section>
     </div>
 

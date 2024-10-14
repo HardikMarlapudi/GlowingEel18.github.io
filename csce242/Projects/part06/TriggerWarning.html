@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Trigger Warning by Neil Gaiman</title>
-    <link rel="stylesheet" href="TriggerWarning.css"> <!-- Link to the correct CSS file -->
+    <link rel="stylesheet" href="TriggerWarning.css">
 </head>
 <body>
     <!-- Welcome Section -->
@@ -16,7 +16,13 @@
 
     <!-- Navbar Section -->
     <nav>
-        <ul>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the App</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -24,7 +30,7 @@
         </ul>
     </nav>
 
-    <!-- Main Content Section for Trigger Warning -->
+    <!-- Main Content Section -->
     <div class="container">
         <header>
             <h2>Trigger Warning</h2>
@@ -32,31 +38,29 @@
         </header>
 
         <section class="book-cover">
-            <img src="images/Neil Gaiman Trigger Warning.jpg" alt="Trigger Warning Book Cover" class="cover">
+            <img src="images/TriggerWarning.jpg" alt="Trigger Warning Book Cover" class="cover">
         </section>
 
         <section class="book-info">
             <h3>Overview</h3>
             <p>
-                <em>Trigger Warning: Short Fictions and Disturbances</em> is a collection of short stories and poems by Neil Gaiman, published in 2015. It includes tales of varying genres, from horror to science fiction to fantasy, exploring dark and unsettling themes that reflect human nature, mythology, and the unknown. The collection also features a novella set in the <em>American Gods</em> universe.
+                <em>Trigger Warning</em> is a collection of short stories and poems by Neil Gaiman, published in 2015. The collection explores the concept of warnings, the narratives that lie behind the stories, and their impact on the readers. With works ranging from horror to fantasy, and a wide array of characters and settings, this book is a brilliant example of Gaiman's ability to both entertain and unsettle his audience.
             </p>
         </section>
 
         <section class="characters">
-            <h3>Notable Stories</h3>
+            <h3>Main Characters</h3>
             <ul>
-                <li><strong>The Truth Is a Cave in the Black Mountains:</strong> A story of greed, revenge, and the supernatural.</li>
-                <li><strong>Orange:</strong> A humorous and surreal story about an alien invasion.</li>
-                <li><strong>The Thing About Cassandra:</strong> A story about imaginary friends and their consequences.</li>
-                <li><strong>A Calendar of Tales:</strong> A collection of short stories inspired by the months of the year.</li>
-                <li><strong>Black Dog:</strong> A novella set in the <em>American Gods</em> universe.</li>
+                <li><strong>Various Characters:</strong> Each story has its own set of characters, both fictional and sometimes real-life inspired.</li>
+                <li><strong>Shadow Moon:</strong> Appears in the short story “Black Dog,” a follow-up to Gaiman's *American Gods*.</li>
+                <li><strong>The Sleeper and the Spindle:</strong> A story where fairy tale characters blend into a unique new narrative.</li>
             </ul>
         </section>
 
         <section class="fun-fact">
             <h3>Fun Fact</h3>
             <button id="reveal-fact">Reveal a Fun Fact</button>
-            <p id="fact" class="hidden">Neil Gaiman's "Trigger Warning" was nominated for the British Fantasy Award for Best Collection in 2016.</p>
+            <p id="fact" class="hidden">Neil Gaiman has stated that the title <em>Trigger Warning</em> is a reference to warnings often given before disturbing content, but also hints that all stories might trigger something different in readers, whether joy, fear, or memory.</p>
         </section>
     </div>
 
@@ -65,6 +69,6 @@
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script src="TriggerWarning.js"></script> <!-- Ensure you link the correct JS file -->
+    <script src="TriggerWarning.js"></script>
 </body>
 </html>

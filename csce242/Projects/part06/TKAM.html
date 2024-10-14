@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>To Kill a Mockingbird by Harper Lee</title>
-    <link rel="stylesheet" href="TKAM.css"> <!-- Ensure you link the correct CSS file -->
+    <link rel="stylesheet" href="TKAM.css">
 </head>
 <body>
     <!-- Welcome Section -->
@@ -16,7 +16,13 @@
 
     <!-- Navbar Section -->
     <nav>
-        <ul>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the App</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -24,7 +30,7 @@
         </ul>
     </nav>
 
-    <!-- Main Content Section for TKAM -->
+    <!-- Main Content Section -->
     <div class="container">
         <header>
             <h2>To Kill a Mockingbird</h2>
@@ -32,32 +38,31 @@
         </header>
 
         <section class="book-cover">
-            <img src="images/To Kill a MockingBird.jpg">
+            <img src="images/To Kill a MockingBird.jpg" alt="To Kill a Mockingbird Book Cover" class="cover">
         </section>
 
         <section class="book-info">
             <h3>Overview</h3>
             <p>
-                "To Kill a Mockingbird" is a novel by Harper Lee published in 1960. Instantly successful, it became a classic of modern American literature. The novel is renowned for its warmth and humor, despite dealing with serious issues of rape and racial inequality. The story is told through the eyes of Scout Finch as her father, Atticus Finch, defends a black man, Tom Robinson, accused of raping a white woman.
+                <em>To Kill a Mockingbird</em> is a novel by Harper Lee published in 1960. The novel is widely regarded as an American classic and deals with serious issues such as racial injustice and the destruction of innocence. Set in the 1930s in the fictional town of Maycomb, Alabama, the story is narrated by Scout Finch, a young girl whose father, Atticus Finch, is a lawyer defending a black man accused of raping a white woman.
             </p>
         </section>
 
         <section class="characters">
             <h3>Main Characters</h3>
             <ul>
+                <li><strong>Atticus Finch:</strong> A lawyer and the father of Scout and Jem.</li>
                 <li><strong>Scout Finch:</strong> The young narrator of the story.</li>
-                <li><strong>Atticus Finch:</strong> Scout's father, a lawyer, and moral hero.</li>
-                <li><strong>Jem Finch:</strong> Scout's older brother.</li>
-                <li><strong>Tom Robinson:</strong> The black man accused of raping Mayella Ewell.</li>
-                <li><strong>Mayella Ewell:</strong> The woman who accuses Tom Robinson of rape.</li>
-                <li><strong>Boo Radley:</strong> A reclusive neighbor who becomes a subject of fascination for Scout and Jem.</li>
+                <li><strong>Jem Finch:</strong> Scout’s older brother.</li>
+                <li><strong>Tom Robinson:</strong> The black man accused of raping a white woman.</li>
+                <li><strong>Boo Radley:</strong> A mysterious and reclusive neighbor.</li>
             </ul>
         </section>
 
         <section class="fun-fact">
             <h3>Fun Fact</h3>
             <button id="reveal-fact">Reveal a Fun Fact</button>
-            <p id="fact" class="hidden">"To Kill a Mockingbird" won the Pulitzer Prize for Fiction in 1961.</p>
+            <p id="fact" class="hidden">Harper Lee based the character of Atticus Finch on her own father, a lawyer who once defended two black men accused of murder.</p>
         </section>
     </div>
 
@@ -66,6 +71,6 @@
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script src="TKAM.js"></script> <!-- Ensure you link the correct JS file -->
+    <script src="TKAM.js"></script>
 </body>
 </html>

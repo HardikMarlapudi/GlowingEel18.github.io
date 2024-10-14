@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Periodic Tales by Hugh Aldersey-Williams</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Periodic Tables</title>
     <link rel="stylesheet" href="PeriodicTales.css">
 </head>
 <body>
@@ -17,7 +16,13 @@
 
     <!-- Navbar Section -->
     <nav>
-        <ul>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About the App</a></li>
             <li><a href="catalog.html">Catalog</a></li>
@@ -28,36 +33,33 @@
     <!-- Main Content Section -->
     <div class="container">
         <header>
-            <h2>Periodic Tales</h2>
-            <h3>by Hugh Aldersey-Williams</h3>
+            <h2>Periodic Tables</h2>
         </header>
 
         <section class="book-cover">
-            <img src="Periodic Tables.jpg" alt="Periodic Tales Book Cover" class="cover">
+            <img src="images/Periodic Tables.jpg" alt="Periodic Tables Book Cover" class="cover">
         </section>
 
         <section class="book-info">
             <h3>Overview</h3>
             <p>
-                <em>Periodic Tales</em> by Hugh Aldersey-Williams explores the fascinating world of the chemical elements through history, culture, and science. From the elements that build our universe to the stories of those who discovered them, the book brings the periodic table to life in an engaging way. It’s a blend of science and storytelling that illuminates how the elements have shaped our world and continue to do so.
+                <em>Periodic Tables</em> is an insightful exploration into the elements of the periodic table. It covers the history, discovery, and application of these elements in our world. The book makes chemistry accessible and interesting for both enthusiasts and beginners, shedding light on the significance of every element that shapes our world.
             </p>
         </section>
 
-        <section class="key-chapters">
-            <h3>Key Chapters</h3>
+        <section class="topics">
+            <h3>Main Topics</h3>
             <ul>
-                <li><strong>Chapter 1:</strong> Gold – A Lustrous History</li>
-                <li><strong>Chapter 3:</strong> Lead – Heavy Metal, Heavy Price</li>
-                <li><strong>Chapter 7:</strong> Phosphorus – Light from Darkness</li>
-                <li><strong>Chapter 9:</strong> Carbon – The Element of Life</li>
-                <li><strong>Chapter 12:</strong> Uranium – Power and Peril</li>
+                <li><strong>Elemental History:</strong> How different elements were discovered and their impact.</li>
+                <li><strong>Element Properties:</strong> Key characteristics that define each element.</li>
+                <li><strong>Applications:</strong> Real-world uses of various elements in technology and daily life.</li>
             </ul>
         </section>
 
         <section class="fun-fact">
             <h3>Fun Fact</h3>
             <button id="reveal-fact">Reveal a Fun Fact</button>
-            <p id="fact" class="hidden">The author Hugh Aldersey-Williams traveled to many places around the world, collecting samples of chemical elements as part of his research for this book.</p>
+            <p id="fact" class="hidden">The periodic table is periodically updated as new elements are synthesized, with the most recent addition being element 118, Oganesson (Og).</p>
         </section>
     </div>
 
