@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <title>Library Webpage Program</title>
-    </head>
-    <body>
-        <div id="content">
-
-          <!-- Main Header -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Webpage with Hamburger Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
     <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
         <h1>Welcome to the Library Webpage Program</h1>
         <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
-        <!-- Navigation Bar -->
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -21,6 +26,8 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Main Content -->
         <center>
             <div class="about-section">
                 <h2>About the App</h2>
@@ -45,5 +52,7 @@
                 <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
             </footer>
         </div>
+
+        <script src="about.js"></script>
     </body>
 </html>
