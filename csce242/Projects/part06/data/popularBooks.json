@@ -1,61 +1,61 @@
 [
   {
     "title": "New Novels",
-    "image": "../images/newnovels.jpg",
+    "image": "images/newnovels.jpg",
     "link": "new-novels.html",
     "description": "A fantastic new novel."
   },
   {
     "title": "Mystery",
-    "image": "../images/mystery.jpg",
+    "image": "images/mystery.jpg",
     "link": "mystery.html",
     "description": "A bestselling mystery."
   },
   {
     "title": "Fantasy",
-    "image": "../images/fantasy.jpg",
+    "image": "images/fantasy.jpg",
     "link": "fantasy.html",
     "description": "An exciting fantasy."
   },
   {
     "title": "Drama",
-    "image": "../images/drama.jpg",
+    "image": "images/drama.jpg",
     "link": "drama.html",
     "description": "A thrilling crime drama."
   },
   {
     "title": "Fiction",
-    "image": "../images/fiction2.jpg",
+    "image": "images/fiction2.jpg",
     "link": "fiction.html",
     "description": "A gripping historical fiction."
   },
   {
     "title": "Nonfiction",
-    "image": "../images/non-fiction2.jpg",
+    "image": "images/non-fiction2.jpg",
     "link": "NonFiction.html",
     "description": "An inspiring non-fiction."
   },
   {
     "title": "Romance",
-    "image": "../images/romance.jpg",
+    "image": "images/romance.jpg",
     "link": "romance.html",
     "description": "A heartwarming romance."
   },
   {
     "title": "Scientific Mystery",
-    "image": "../images/scientific-mystery.jpg",
+    "image": "images/scientific-mystery.jpg",
     "link": "scientific-mystery.html",
     "description": "A deep dive into a scientific mystery."
   },
   {
     "title": "Sci-Fi",
-    "image": "../images/sci-fi.jpg",
+    "image": "images/sci-fi.jpg",
     "link": "sci-fi.html",
     "description": "An adventurous sci-fi journey."
   },
   {
     "title": "Horror",
-    "image": "../images/horror.jpg",
+    "image": "images/horror.jpg",
     "link": "horror.html",
     "description": "A terrifying horror story."
   }
