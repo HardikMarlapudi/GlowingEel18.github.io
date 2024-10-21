@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Library Webpage Program</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    
+    <!-- Welcome Section -->
+    <header class="welcome-section">
+        <h1>Welcome to the Library Webpage Program</h1>
+        <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the App</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="Search-box.html">Search</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Contact Section -->
+    <section class="contact">
+        <h1>Contact Me</h1>
+        <p>If you have any questions or suggestions, feel free to reach out to us using the form below or by email, phone, or through our social media accounts.</p>
+
+        <form id="contact-form" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="7afe7930-8084-4fdd-9fe0-678ee3fdb2db">
+        
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="text" name="name" placeholder="Your Name:" required>
+            <input type="email" name="email" placeholder="Your Email:" required>
+            <textarea name="message" placeholder="Your Message:" required></textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+            <button type="submit">Submit Form</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result"></div>
+
+        <!-- Add a response section for Testimonials -->
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"This library platform has helped me discover new books effortlessly!"</p>
+                <span>- Alex Johnson</span>
+            </div>
+            <div class="testimonial">
+                <p>"The customer support is great. I got a response within minutes!"</p>
+                <span>- Sarah Lee</span>
+            </div>
+        </section>
+
+        <!-- Add a map section (Optional) -->
+        <section class="map">
+            <h2>Our Location</h2>
+            <iframe
+            id="map"
+            src="https://maps.google.com/maps?q=new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </section>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
+    </footer>
+
+    <script src="contactme.js"></script>
+</body>
+</html> 

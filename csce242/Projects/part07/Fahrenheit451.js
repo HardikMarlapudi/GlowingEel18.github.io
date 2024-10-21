@@ -1,45 +1,28 @@
-// JavaScript to handle the hamburger menu toggle
 document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navbar = document.querySelector('.navbar');
 
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('is-active');
-        navbar.classList.toggle('active');
-    });
-});
-
-// Fun fact reveal logic
-document.getElementById('reveal-fact').addEventListener('click', function() {
-    var fact = document.getElementById('fact');
-    if (fact.classList.contains('hidden')) {
-        fact.classList.remove('hidden');
-        this.textContent = 'Hide Fun Fact';
-    } else {
-        fact.classList.add('hidden');
-        this.textContent = 'Reveal a Fun Fact';
+    if (mobileMenu && navbar) {
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-active');
+            navbar.classList.toggle('active');
+        });
     }
-});
 
-// JavaScript to handle the hamburger menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navbar = document.querySelector('.navbar');
+    // Fun fact reveal logic
+    const revealFactButton = document.getElementById('reveal-fact');
+    const fact = document.getElementById('fact');
 
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('is-active');
-        navbar.classList.toggle('active');
-    });
-});
-
-// Fun fact reveal logic
-document.getElementById('reveal-fact').addEventListener('click', function() {
-    var fact = document.getElementById('fact');
-    if (fact.classList.contains('hidden')) {
-        fact.classList.remove('hidden');
-        this.textContent = 'Hide Fun Fact';
-    } else {
-        fact.classList.add('hidden');
-        this.textContent = 'Reveal a Fun Fact';
+    if (revealFactButton && fact) {
+        revealFactButton.addEventListener('click', function() {
+            if (fact.classList.contains('hidden')) {
+                fact.classList.remove('hidden');
+                this.textContent = 'Hide Fun Fact';
+            } else {
+                fact.classList.add('hidden');
+                this.textContent = 'Reveal a Fun Fact';
+            }
+        });
     }
 });
