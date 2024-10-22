@@ -1,0 +1,179 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', serif;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu Styling */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Filter Container */
+#filter-container {
+    margin: 20px;
+    text-align: center;
+}
+
+#filter-container select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Book Catalog */
+.book-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-item {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.book-item h3 {
+    margin-top: 15px;
+    color: red;
+    font-size: 1.4rem;
+}
+
+.book-item a {
+    text-decoration: none;
+    color: red;
+}
+
+.book-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 10;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .book-catalog {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}

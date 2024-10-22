@@ -1,7 +1,7 @@
-const menuToggle = document.getElementById('mobile-menu');
-const navbar = document.querySelector('nav ul');
+// JavaScript to toggle the active class on the nav ul when the hamburger is clicked
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('nav ul');
 
 menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navbar.classList.toggle('active');
+    navLinks.classList.toggle('active');
 });

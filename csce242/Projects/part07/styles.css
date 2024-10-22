@@ -1310,7 +1310,7 @@ nav ul li a:hover {
 
 /* Hamburger Menu Styles */
 .menu-toggle {
-  display: none; /* Hidden by default for larger screens */
+  display: block; /* Hidden by default for larger screens */
   cursor: pointer;
 }
 
@@ -1457,5 +1457,58 @@ nav ul li a:hover {
   .card {
       width: 100%;
       margin: 10px auto;
+  }
+}
+
+/* Mobile Menu - Hamburger Icon */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Toggle hamburger menu into 'X' shape */
+#mobile-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navbar adjustments for mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Show hamburger menu on mobile */
+  }
+
+  nav ul {
+      display: none; /* Hide the nav links by default */
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+
+  nav ul.active {
+      display: flex; /* Show links when hamburger menu is clicked */
+  }
+
+  nav ul li {
+      padding: 15px 0;
   }
 }

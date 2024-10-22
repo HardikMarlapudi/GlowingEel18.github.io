@@ -13,33 +13,44 @@ header {
     text-align: center;
 }
 
-header nav ul {
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of navbar items on smaller screens */
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+.navbar ul li {
+    padding: 14px 20px;
 }
 
-header nav ul li a {
+.navbar ul li a {
     color: white;
+    text-align: center;
+    padding: 14px 20px;
     text-decoration: none;
-    font-size: 18px;
+    display: block;
+    font-weight: bold; /* Make the text bold for consistency */
 }
 
+.navbar ul li a.active, .navbar ul li a:hover {
+    color: red;
+}
+
+/* Main heading and paragraph styles */
 h1 {
     color: red;
 }
 
 p {
     color: white;
-}
-
-header nav ul li a.active, header nav ul li a:hover {
-    color: red;
 }
 
 /* Contact section styling (consistent with overall theme) */
@@ -128,43 +139,40 @@ footer {
         font-size: 14px;
     }
 
-    header nav ul li {
-        display: block;
+    /* Responsive navbar adjustments */
+    .navbar ul {
+        flex-direction: column; /* Stacks nav items vertically on smaller screens */
+    }
+
+    .navbar ul li {
         margin: 10px 0;
-        text-align: center;
+    }
+
+    header {
+        padding: 10px;
     }
 }
 
-/* Testimonials section */
-.testimonials {
-    background-color: #f4f4f4;
-    padding: 40px;
-    text-align: center;
-    margin-top: 30px;
-}
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .contact {
+        width: 100%;
+        padding: 15px;
+    }
 
-.testimonials h2 {
-    color: red;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
+    .contact h1 {
+        font-size: 24px;
+    }
 
-.testimonial {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .contact p {
+        font-size: 12px;
+    }
 
-.testimonial p {
-    font-size: 16px;
-    color: #333;
-}
+    .contact input, .contact textarea {
+        font-size: 14px;
+    }
 
-.testimonial span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    .contact button {
+        width: 100%;
+    }
 }

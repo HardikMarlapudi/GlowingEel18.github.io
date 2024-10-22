@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Webpage Program - Search</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Search-box.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Use the same header/navbar as other pages -->
     <header>
-
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        
+
         <h1>Welcome to the Library Webpage Program</h1>
         <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
         <!-- Navigation Bar -->
@@ -25,29 +24,24 @@
                 <li><a href="about.html">About the App</a></li>
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="Search-box.html">Search</a></li>
-                <li><a href="contact.html">Contact Us</a></li> <!-- New Contact Me page -->
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Search Form -->
-    <div class="main-content">
+    <!-- Search Box Section -->
+    <section id="search-section">
         <h2>Search Text</h2>
         <p>Search for your favorite books below:</p>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Please enter a search term or URL">
-            <button id="search-button">Search</button>
-        </div>
-    </div>
+        <input type="text" id="search-box" placeholder="Please enter a search term or URL">
+        <br>
+        <button id="search-button">Search</button>
+    </section>
 
-    <div class="search-footer">
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
-  </div>
 
-    <!-- JavaScript -->
     <script src="Search-box.js"></script>
 </body>
 </html>

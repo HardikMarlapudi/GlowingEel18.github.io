@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Webpage Program - Catalog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
     <!-- Use the same header/navbar as other pages -->
     <header>
-
         <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-        
+
         <h1>Welcome to the Library Webpage Program</h1>
         <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
         <!-- Navigation Bar -->
@@ -25,13 +24,22 @@
                 <li><a href="about.html">About the App</a></li>
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="Search-box.html">Search</a></li>
-                <li><a href="contact.html">Contact Us</a></li> <!-- New Contact Me page -->
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    
-    <div id="filter-container"></div>
-    
+
+    <!-- Filter Dropdown Menu -->
+    <div id="filter-container">
+        <label for="genre-filter">Filter by Genre:</label>
+        <select id="genre-filter">
+            <option value="all">All</option>
+            <option value="fiction">Fiction</option>
+            <option value="nonfiction">Nonfiction</option>
+        </select>
+    </div>
+
+    <!-- Book Catalog -->
     <div class="book-catalog">
         <!-- Fiction Books -->
         <div class="book-item fiction">
@@ -58,8 +66,8 @@
             <img src="images/Smoke and Mirrors.jpg" alt="Neil Gaiman Smoke & Mirrors">
             <a href="Smoke&Mirrors.html"><h3>Neil Gaiman Smoke & Mirrors</h3></a>
         </div>
-    
-        <!-- NonFiction Books -->
+
+        <!-- Nonfiction Books -->
         <div class="book-item nonfiction">
             <img src="images/StrangeChemistry.jpg" alt="Strange Chemistry">
             <a href="StrangeChemistry.html"><h3>Strange Chemistry</h3></a>
@@ -90,7 +98,7 @@
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="catalog.js"></script>
 
 </body>
 </html>

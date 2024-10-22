@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Webpage Program - Catalog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mainPage.css">
 </head>
 <body>
-    <!-- Use the same header/navbar as other pages -->
     <header>
-
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        
         <div class="container">
-        <h1>Welcome to the Library Webpage Program</h1>
-        <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
-        <!-- Navigation Bar -->
-        <nav>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About the App</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="Search-box.html">Search</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+            <h1>Welcome to the Library Webpage Program</h1>
+            <p>Your one-stop solution for finding fiction and non-fiction books across various genres.</p>
+            <!-- Navigation Bar -->
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About the App</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="Search-box.html">Search</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Most Popular Books Section with 10 books -->
         <section class="popular-books">
-            <h2>Explore our Genres</h2>
+            <center><h2>Explore our Genres</h2></center>
             <div class="book-grid">
                 <!-- Book 1 -->
                 <div class="book-item" id="book1">
@@ -108,12 +106,11 @@
             </div>
         </section>
     </main>
-</div>
 
     <footer>
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script src="index2.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

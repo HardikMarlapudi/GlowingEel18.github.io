@@ -37,3 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", showEmailResult);
 }); 
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger menu functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.navbar ul');
+
+    // Add an event listener to the hamburger icon
+    mobileMenu.addEventListener('click', () => {
+        // Toggle the 'active' class on the hamburger menu and the nav links
+        mobileMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+});

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Select the search button and input field
-    const searchButton = document.querySelector('button'); // No need for [type="submit"] since your button doesn't have a type attribute
+    const searchButton = document.querySelector('button');
     const searchInput = document.getElementById('search-input');
 
     // Add event listener to the search button
@@ -24,6 +24,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchBook(searchText);
             }
         }
+    });
+
+    // Hamburger menu functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('nav ul');
+
+    // Add an event listener to the hamburger icon
+    mobileMenu.addEventListener('click', () => {
+        // Toggle the 'active' class on the hamburger menu and the nav links
+        mobileMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
 });
 
@@ -54,13 +65,13 @@ function searchBook(searchText) {
     }
 }
 
-// Select the hamburger menu icon and the navbar
-const mobileMenu = document.getElementById('mobile-menu');
-const navbar = document.querySelector('.navbar');
-
-// Add an event listener to the hamburger icon
-mobileMenu.addEventListener('click', () => {
-    // Toggle the 'active' class on the menu icon and the navbar
-    mobileMenu.classList.toggle('active');
-    navbar.classList.toggle('active');
+document.getElementById("search-button").addEventListener("click", function() {
+    const searchTerm = document.getElementById("search-box").value;
+    
+    if (searchTerm) {
+        // Assuming 'search-results.html' is your results page
+        window.location.href = `search-results.html?query=${encodeURIComponent(searchTerm)}`;
+    } else {
+        alert("Please enter a search term.");
+    }
 });
