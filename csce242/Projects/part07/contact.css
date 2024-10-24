@@ -1,16 +1,39 @@
 /* General body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* General Styling */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Header and navigation styling (same as index.html) */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Arial', serif;
+}
+
+/* Header Styling */
 header {
     background-color: #333;
-    padding: 20px;
+    color: white;
+    padding: 10px;
     text-align: center;
+}
+
+header h1 {
+    color: red;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
 .navbar {
@@ -34,10 +57,10 @@ header {
 .navbar ul li a {
     color: white;
     text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
+    font-size: 1.2rem;
     display: block;
-    font-weight: bold; /* Make the text bold for consistency */
+     /* Make the text bold for consistency */
 }
 
 .navbar ul li a.active, .navbar ul li a:hover {

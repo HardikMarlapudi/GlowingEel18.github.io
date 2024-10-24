@@ -1,7 +1,14 @@
-// JavaScript to toggle the active class on the nav ul when the hamburger is clicked
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('nav ul');
+// No hamburger menu needed, but here’s a sample of JS you might want for future enhancements
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+// Example: Smooth scroll for anchor links (if you want smooth scrolling for internal links)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
+
+// You can add any additional JS functionality for other features here as needed

@@ -1,28 +1,38 @@
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
+h1, h2 {
+    font-family: 'Arial', serif;
+}
+
+/* Header Styling */
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px;
     color: red;
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
 nav {
@@ -49,20 +59,6 @@ nav {
 .navbar li a:hover {
     background-color: red;
     border-radius: 5px;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
 }
 
 .book-grid {
@@ -100,17 +96,14 @@ footer {
     margin-top: 40px;
 }
 
+/* Responsive Design - Ensure navbar appears in one column on smaller screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        display: none;
+        align-items: center; /* Center the links */
     }
 
-    .menu-toggle {
-        display: flex;
-    }
-
-    .navbar.active {
-        display: flex;
+    .navbar li {
+        margin: 10px 0; /* Space out the links vertically */
     }
 }

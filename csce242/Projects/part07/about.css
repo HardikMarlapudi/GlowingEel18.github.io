@@ -22,7 +22,6 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
@@ -40,12 +39,12 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 15px;
-    position: relative;
 }
 
 nav ul li a {
@@ -63,48 +62,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Dropdown for larger screens (optional if you plan to add submenus) */
-nav ul li:hover ul {
-    display: block;
-}
-
-/* Hamburger Menu Styling */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    left: 20px;
-}
-
-.menu-toggle .bar {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
 /* Main Section Styling */
 .about-section {
     max-width: 900px;
@@ -115,12 +72,6 @@ nav ul li:hover ul {
     border-radius: 10px;
     text-align: center;
     border-top: 5px solid #333;
-    transition: all 0.3s ease;
-}
-
-.about-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .about-section h2 {
@@ -151,11 +102,6 @@ nav ul li:hover ul {
     line-height: 1.8;
     margin: 20px 40px;
     color: #555;
-    transition: color 0.3s ease;
-}
-
-.about-section p:hover {
-    color: #333;
 }
 
 /* Image Styling */
@@ -186,82 +132,20 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: 40px;
-    font-size: 1rem;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer p a {
-    color: red;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-footer p a:hover {
-    color: white;
-}
-
-/* Buttons (Optional - if you want to add call-to-action buttons) */
-.button {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: darkred;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .about-section {
-        padding: 15px;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .about-section h2 {
-        font-size: 1.8rem;
+    nav ul li {
+        margin-bottom: 15px;
     }
 
-    .about-section2 h2, .about-section3 h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-section p {
+    nav ul li a {
         font-size: 1rem;
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-section {
-        padding: 10px;
-    }
-
-    .about-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-section2 h2, .about-section3 h2 {
-        font-size: 1.2rem;
-    }
-
-    .about-section p {
-        font-size: 0.9rem;
-    }
-
-    .author-image {
-        width: 90px;
-        height: 90px;
     }
 }

@@ -1,17 +1,19 @@
 /* General Styling */
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Arial', serif;
 }
 
@@ -19,20 +21,19 @@ h1, h2, h3 {
 header {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
     color: red;
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
 nav ul {
@@ -59,22 +60,6 @@ nav ul li a:hover {
     background-color: rgba(255, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 5px;
-}
-
-/* Hamburger Menu Styling */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
 }
 
 /* Filter Container */
@@ -154,22 +139,15 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
-        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #333;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        z-index: 10;
+        padding: 10px;
+        align-items: center;
     }
 
-    nav ul.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
+    nav ul li {
+        margin: 10px 0;
     }
 
     .book-catalog {

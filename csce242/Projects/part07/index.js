@@ -84,9 +84,8 @@ const filterBooks = () => {
 }
 
 const menuToggle = document.getElementById('mobile-menu');
-const navbar = document.querySelector('nav ul');
+const navbar = document.getElementById('nav-links');
 
 menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
     navbar.classList.toggle('active');
 });
