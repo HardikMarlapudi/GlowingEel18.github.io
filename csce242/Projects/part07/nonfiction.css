@@ -50,7 +50,7 @@ nav ul li a.active {
 }
 
 nav ul li a:hover {
-    background-color: #777;
+    background-color: red;
 }
 
 /* Main Content Styles */
@@ -108,7 +108,7 @@ nav ul li a:hover {
 }
 
 #moreButton:hover {
-    background-color: #444;
+    background-color: red;
 }
 
 /* Footer */

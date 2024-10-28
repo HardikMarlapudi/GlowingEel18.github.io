@@ -32,13 +32,13 @@ const books = [
     }
 ];
 
-// Function to shuffle and select random books to display using arrow function
+// Function to shuffle and select random books to display
 const getRandomBooks = () => {
     const shuffledBooks = books.sort(() => 0.5 - Math.random());
     return shuffledBooks.slice(0, 3); // Select the first 3 books
 }
 
-// Function to display the selected books on the page using arrow function
+// Function to display the selected books on the page
 const displayBooks = () => {
     const bookListContainer = document.getElementById('novel-list');
     const randomBooks = getRandomBooks();
@@ -59,11 +59,8 @@ const displayBooks = () => {
     });
 }
 
-// Run the function to display books when the page loads using arrow function
+// Run the function to display books when the page loads
 window.onload = () => displayBooks();
 
-// JavaScript to reload/refresh the page when the "More..." button is clicked
-document.getElementById('moreButton').addEventListener('click', () => {
-    // You can refresh the page using location.reload() method
-    location.reload();
-});
+// Reload/refresh the page when the "More..." button is clicked
+document.getElementById('moreButton').addEventListener('click', () => location.reload());

@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #666;
+    background-color: red;
 }
 
 nav ul li a:hover {
@@ -134,7 +134,7 @@ nav ul li a:hover {
 }
 
 #moreButton:hover {
-    background-color: #444;
+    background-color: red;
 }
 
 /* Style for the "More..." button */
@@ -152,10 +152,6 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-#moreButton:hover {
-    background-color: #444;
 }
 
 /* Footer */

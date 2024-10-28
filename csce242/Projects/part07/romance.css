@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #333;
+    background-color: red;
 }
 
 nav ul li a.active {
@@ -108,7 +108,7 @@ nav ul li a.active {
 }
 
 #moreButton:hover {
-    background-color: #444;
+    background-color: red;
 }
 
 /* Footer */

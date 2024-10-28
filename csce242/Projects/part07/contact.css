@@ -87,7 +87,7 @@ p {
 }
 
 .contact h1 {
-    color: red;
+    color: #333;
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
@@ -167,9 +167,7 @@ footer {
         flex-direction: column; /* Stacks nav items vertically on smaller screens */
     }
 
-    .navbar ul li {
-        margin: 10px 0;
-    }
+    
 
     header {
         padding: 10px;

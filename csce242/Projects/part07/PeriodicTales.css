@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #444;
+    background-color: red;
 }
 
 /* Responsive Navbar - Mobile View */
@@ -131,7 +131,7 @@ button {
 }
 
 button:hover {
-    background-color: #777;
+    background-color: red;
 }
 
 /* Footer Styles */
