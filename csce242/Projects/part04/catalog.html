@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Webpage Program - Catalog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
     <!-- Use the same header/navbar as other pages -->
@@ -91,22 +91,7 @@
         <p>&copy; 2024 Hardik Marlapudi. All rights reserved.</p>
     </footer>
 
-    <script>
-        function filterBooks() {
-            var genre = document.getElementById('genre').value;
-            var books = document.getElementsByClassName('book-item');
-        
-            for (var i = 0; i < books.length; i++) {
-                if (genre === 'all') {
-                    books[i].classList.remove('hidden');
-                } else if (books[i].classList.contains(genre)) {
-                    books[i].classList.remove('hidden');
-                } else {
-                    books[i].classList.add('hidden');
-                }
-            }
-        }
-        </script>
+    <script src="catalog.js"></script>
 
 </body>
 </html>

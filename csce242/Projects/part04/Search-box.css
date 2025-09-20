@@ -1,0 +1,158 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  body {
+    background: #1e1e2f; /* Dark theme */
+    color: #f5f5f5;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* ===== Header ===== */
+  header {
+    text-align: center;
+    padding: 25px 15px;
+    background: #2a2a40;
+    border-bottom: 2px solid #ffcc00;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  
+  /* ===== Navbar ===== */
+  nav ul.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px 0;
+    background: #2a2a40;
+  }
+  
+  nav ul.navbar li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul.navbar li a:hover {
+    color: #ffcc00;
+  }
+  
+  /* ===== Main Content ===== */
+  .main-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #2a2a40;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    flex: 1; /* Ensures footer stays at bottom */
+  }
+  
+  .main-content h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+  }
+  
+  /* ===== Search Bar ===== */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar label {
+    font-weight: bold;
+    color: #f5f5f5;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #3a3a55;
+    color: #f5f5f5;
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+  }
+  
+  .search-bar input:focus {
+    box-shadow: 0 0 5px #ffcc00;
+  }
+  
+  .search-bar button {
+    padding: 10px 16px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .search-bar button:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+  }
+  
+  /* ===== Footer ===== */
+  #search-Footer {
+    margin-top: auto;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #2a2a40;
+    border-top: 2px solid #ffcc00;
+  }
+  
+  footer p {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    nav ul.navbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+    }
+  }
+  
