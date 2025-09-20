@@ -20,5 +20,5 @@ const getRadioValue = (radioName) => {
         }
     }
 
-    return ""; 
+    return "";
 };
